@@ -33,44 +33,26 @@ let g:ycm_min_num_of_chars_for_completion = 2
 " YCM的previw窗口比较恼人，还是关闭比较好
 set completeopt-=preview
 
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_next_key="\<C-s>"
 
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => lightline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ }
-"
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ 'active': {
-"      \   'left': [ ['mode', 'paste'],
-"      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-"      \   'right': [ [ 'lineinfo' ], ['percent'] ]
-"      \ },
-"      \ 'component': {
-"      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-"      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-"      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-"      \ },
-"      \ 'component_visible_condition': {
-"      \   'readonly': '(&filetype!="help"&& &readonly)',
-"      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-"      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-"      \ },
-"      \ 'separator': { 'left': ' ', 'right': ' ' },
-"      \ 'subseparator': { 'left': ' ', 'right': ' ' }
-"      \ }
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
-nnoremap <silent> <leader>d :GitGutterToggle<cr>
+" let g:gitgutter_enabled=0
+" nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => python-mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"取消代码折叠
+let g:pymode_folding = 0
+"修改后保存时进行检查
+let g:pymode_lint_on_write = 0
