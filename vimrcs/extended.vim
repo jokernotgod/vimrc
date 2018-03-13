@@ -6,7 +6,8 @@ let mapleader="\<Space>"
 let g:mapleader ="\<Space>" 
 " let mapleader = ","
 " let g:mapleader = ","
-" Go to home and end using capitalized directions
+
+nmap <Leader>y :!ici <C-R><C-W><CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
