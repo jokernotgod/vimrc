@@ -40,7 +40,7 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 " Tagbar
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
-let g:tagbar_left = 1
+let g:tagbar_right= 1
 nmap <F4> :TagbarToggle<CR>
 
 map <F6> :call FormartSrc()<CR><CR>
