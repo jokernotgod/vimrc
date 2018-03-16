@@ -2,10 +2,10 @@
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader="\<Space>"
-let g:mapleader ="\<Space>" 
-" let mapleader = ","
-" let g:mapleader = ","
+" let mapleader="\<Space>"
+" let g:mapleader="\<Space>" 
+let mapleader = ";"
+let g:mapleader = ";"
 
 nmap <Leader>y :!ici <C-R><C-W><CR>
 
@@ -36,12 +36,17 @@ autocmd BufNewFile * normal G
 "为方便复制，用<F2>开启/关闭行号显示:
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
+"run python file
+map <F5> :call RunPyFile()<CR>
+func! RunPyFile()
+    exec "w"
+    if &filetype == 'python'
+        exec "!time ~/.virtualenv/py3/bin/python %"
+    else
+        echo &filetype
+    endif
+endfunc
 
-" Tagbar
-let g:tagbar_width=35
-let g:tagbar_autofocus=1
-let g:tagbar_right= 1
-nmap <F4> :TagbarToggle<CR>
 
 map <F6> :call FormartSrc()<CR><CR>
 
