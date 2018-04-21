@@ -3,16 +3,16 @@ filetype plugin indent on
 " vundle 环境设置
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'https://gitee.com/VundleVim/Vundle.vim'
-Plugin 'https://gitee.com/bling/vim-airline'
+Plugin 'https://gitee.com/grusaber/Vundle.vim'
+Plugin 'https://gitee.com/grusaber/vim-airline'
 " 补全括号
-Plugin 'https://gitee.com/Raimondi/delimitMate'
-Plugin 'https://gitee.com/rhysd/vim-fixjson'
-Plugin 'https://gitee.com/airblade/vim-gitgutter'
-Plugin 'https://gitee.com/scrooloose/nerdtree'
-Plugin 'https://gitee.com/majutsushi/tagbar'
-Plugin 'https://gitee.com/kevinw/pyflakes-vim'
-Plugin 'https://gitee.com/Valloric/YouCompleteMe'
+Plugin 'https://gitee.com/grusaber/delimitMate'
+Plugin 'https://gitee.com/grusaber/vim-fixjson'
+Plugin 'https://gitee.com/grusaber/vim-gitgutter'
+Plugin 'https://gitee.com/grusaber/nerdtree'
+Plugin 'https://gitee.com/grusaber/tagbar'
+Plugin 'https://gitee.com/grusaber/pyflakes-vim'
+Plugin 'https://gitee.com/grusaber/YouCompleteMe'
 
 "Plugin 'klen/python-mode'
 "Plugin 'davidhalter/jedi-vim'
