@@ -91,6 +91,10 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
+" 突出显示当前行
+set cursorline
+" 突出显示当前列
+"set cursorcolumn
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts

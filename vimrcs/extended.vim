@@ -17,6 +17,10 @@ map <C-l> <C-W>l
 noremap H ^
 noremap L $
 
+" 调整缩进后自动选中，方便再次操作
+vnoremap < <gv
+vnoremap > >gv
+
 "新建.py,.sh文件，自动插入文件头
 autocmd BufNewFile *.sh,*.py exec ":call SetTitle()"
 func! SetTitle()
