@@ -10,7 +10,7 @@ Plug 'majutsushi/tagbar'
 Plug 'kevinw/pyflakes-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
-Plug 'klen/python-mode'
+"Plug 'klen/python-mode'
 "Plug 'davidhalter/jedi-vim'
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'scrooloose/syntastic'
