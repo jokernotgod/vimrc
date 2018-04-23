@@ -1,26 +1,23 @@
-filetype plugin indent on
-
-" vundle 环境设置
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
+call plug#begin('~/.vim/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'bling/vim-airline'
 " 补全括号
-Plugin 'Raimondi/delimitMate'
-Plugin 'rhysd/vim-fixjson'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'kevinw/pyflakes-vim'
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Raimondi/delimitMate'
+Plug 'rhysd/vim-fixjson'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'kevinw/pyflakes-vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
-"Plugin 'klen/python-mode'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'suan/vim-instant-markdown'
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'SirVer/ultisnips'
-"Plugin 'honza/vim-snippets'
+Plug 'klen/python-mode'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'terryma/vim-multiple-cursors'
+"Plug 'scrooloose/syntastic'
+"Plug 'suan/vim-instant-markdown'
+"Plug 'pangloss/vim-javascript'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 
-call vundle#end()
+call plug#end()
+
