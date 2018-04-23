@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'VundleVim/Vundle.vim'
 Plug 'bling/vim-airline'
 " 补全括号
 Plug 'Raimondi/delimitMate'
