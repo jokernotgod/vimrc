@@ -103,6 +103,7 @@ set cursorline
 syntax enable 
 
 color monokai
+"https://github.com/flazz/vim-colorschemes
 "set background=dark
 
 " Set extra options when running in GUI mode
