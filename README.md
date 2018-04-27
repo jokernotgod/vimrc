@@ -23,5 +23,6 @@ sudo make install
 
 ### bashrc or zshrc:
 ```sh
-alias vi='/usr/local/vim8/bin/vim'
+sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vim
+sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vi
 ```
