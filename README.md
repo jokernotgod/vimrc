@@ -11,7 +11,7 @@ reference from [ma6174](https://github.com/ma6174/vim-deprecated)
 ## vim不支持python时
 
 ```sh
-sudo apt install python-dev python3-dev libncurses5-dev
+sudo apt install cmake python3-dev libncurses5-dev
 
 git clone https://github.com/vim/vim
 
@@ -21,8 +21,9 @@ make
 sudo make install
 ```
 
-### bashrc or zshrc:
+### command:
 ```sh
 sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vim
+or
 sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vi
 ```
