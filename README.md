@@ -5,16 +5,14 @@ vimrc config
 wget -qO- https://raw.githubusercontent.com/killmymates/vimrc/master/setup.sh | sh -x
 ```
 
-reference from [ma6174](https://github.com/ma6174/vim-deprecated)
-
-
-## vim不支持python时
+## vim
 
 ```sh
-sudo apt install vim cmake python3-dev libncurses5-dev
+sudo apt install vim 
 ```
 or
 ```sh
+sudo apt install cmake python3-dev libncurses5-dev
 git clone https://github.com/vim/vim
 
 cd vim/src 
@@ -26,3 +24,5 @@ sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vim
 or
 sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vi
 ```
+
+reference from [ma6174](https://github.com/ma6174/vim-deprecated)
