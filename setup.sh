@@ -5,7 +5,7 @@ echo "installing..."
 if which apt-get >/dev/null; then
 	sudo apt-get install -y vim git cmake python3-dev libncurses5-dev
 ##Add HomeBrew support on  Mac OS
-if which brew >/dev/null;then
+elif which brew >/dev/null;then
     echo "You are using HomeBrew tool, I don't konw if it can work well"
     brew install vim git 
 fi
