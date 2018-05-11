@@ -5,7 +5,7 @@ vimrc config
 wget -qO- https://raw.githubusercontent.com/killmymates/vimrc/master/setup.sh | sh -x
 ```
 
-## vim
+## about vim support python3
 
 ```sh
 sudo apt install vim 
