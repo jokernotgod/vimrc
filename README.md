@@ -4,6 +4,13 @@ vimrc config
 ```sh
 wget -qO- https://raw.githubusercontent.com/killmymates/vimrc/master/setup.sh | sh -x
 ```
+#####
+有时候ycm会在安装时报错
+```sh
+cd ~/.vim/plugged/YouCompleteMe
+git submodule update --init --recursive
+./install.py
+```
 
 ## about vim support python3
 
