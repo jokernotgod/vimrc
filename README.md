@@ -15,7 +15,7 @@ git submodule update --init --recursive
 ## about vim support python3
 
 ```sh
-sudo apt install vim 
+sudo apt install vim-gtk
 ```
 or
 ```sh
@@ -26,10 +26,6 @@ cd vim/src
 ./configure --with-features=huge --enable-python3interp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/ --enable-multibyte --enable-cscope --prefix=/usr/local/vim8/
 make
 sudo make install
-
-sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vim
-or
-sudo ln -s /usr/local/vim8/bin/vim /usr/local/bin/vi
 ```
 
-reference from [ma6174](https://github.com/ma6174/vim-deprecated)
+reference from [ma6174](https://github.com/ma6174/vim-deprecated) and [YouCompleteMe](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
