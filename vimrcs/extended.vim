@@ -1,11 +1,10 @@
 "以下是改键
 
 " With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-" let mapleader="\<Space>"
-" let g:mapleader="\<Space>" 
-let mapleader = ";"
-let g:mapleader = ";"
+let mapleader="\<Space>"
+let g:mapleader="\<Space>" 
+"let mapleader = ";"
+"let g:mapleader = ";"
 
 nmap <Leader>y :!ici <C-R><C-W><CR>
 
@@ -28,8 +27,8 @@ func! SetTitle()
         call setline(1,"\#!/bin/bash")
         call append(line("."), "")
     elseif &filetype == 'python'
-        call setline(1,"#!/usr/bin/env python")
-        call append(line("."),"# coding=utf-8")
+        call setline(1,"#!/usr/bin/env python3")
+        "call append(line("."),"# coding=utf-8")
         call append(line(".")+1, "")
         call append(line(".")+8, "")
     endif
@@ -60,7 +59,8 @@ func! FormartSrc()
     if &filetype == 'py'||&filetype == 'python'
         "exec "r !autopep8 -i --aggressive --ignore=E501 %"
         "change 79 to 120
-        exec "r !yapf --style ~/.yapf/style.cfg -i %"
+        "exec "r !yapf --style ~/.yapf/style.cfg -i %"
+        exec "r !yapf -i"
     else
         exec "normal gg=G"
         return
