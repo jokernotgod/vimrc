@@ -13,20 +13,17 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-
 " Fast saving
-nmap <leader>w :w!<cr>
-
+" nmap <leader>w :w!<cr>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
-
+" command W w !sudo tee % > /dev/null
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+" Set 5 lines to the cursor - when moving vertically using j/k
+set so=5
 
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
@@ -95,7 +92,7 @@ endif
 " 突出显示当前行
 set cursorline
 " 突出显示当前列
-"set cursorcolumn
+set cursorcolumn
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
