@@ -13,10 +13,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <leader>nn :NERDTreeToggle<CR>
 map <leader>nb  :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
-"列出当前目录文件  
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC> :NERDTreeToggle<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar
@@ -24,7 +20,6 @@ imap <F3> <ESC> :NERDTreeToggle<CR>
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
 let g:tagbar_right= 1
-nmap <F4> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Youcompleteme
@@ -58,13 +53,13 @@ let g:multi_cursor_next_key="\<C-s>"
 " => python-mode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "取消代码折叠
-"let g:pymode_options_colorcolumn = 1
+let g:pymode_options_colorcolumn = 1
 
 let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 119
 
 ""修改后保存时进行检查
-"let g:pymode_lint_on_write = 0
+let g:pymode_lint_on_write = 0
 ""不在父目录下查找.ropeproject，能提升响应速度
 let g:pymode_rope_lookup_project = 0
 ""项目修改后重新生成缓存
