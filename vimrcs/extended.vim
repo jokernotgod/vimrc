@@ -28,7 +28,7 @@ func! SetTitle()
         call append(line("."), "")
     elseif &filetype == 'python'
         call setline(1,"#!/usr/bin/env python3")
-        "call append(line("."),"# coding=utf-8")
+        call append(line("."),"# coding=utf-8")
         call append(line(".")+1, "")
         call append(line(".")+8, "")
     endif
@@ -37,7 +37,14 @@ endfunc
 autocmd BufNewFile * normal G
 
 "为方便复制，用<F2>开启/关闭行号显示:
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+" nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+nnoremap <F2> :set norelativenumber!<CR>
+
+"列出当前目录文件  
+map <F3> :NERDTreeToggle<CR>
+imap <F3> <ESC> :NERDTreeToggle<CR>
+
+nmap <F4> :TagbarToggle<CR>
 
 "run python file
 map <F5> :call RunPyFile()<CR>
@@ -50,24 +57,26 @@ func! RunPyFile()
     endif
 endfunc
 
-
-map <F6> :call FormartSrc()<CR><CR>
+map <F6> :PymodeLintAuto<CR>
+"map <F6> :call FormartSrc()<CR><CR>
 
 "定义FormartSrc()
-func! FormartSrc()
-    exec "w"
-    if &filetype == 'py'||&filetype == 'python'
-        "exec "r !autopep8 -i --aggressive --ignore=E501 %"
-        "change 79 to 120
-        "exec "r !yapf --style ~/.yapf/style.cfg -i %"
-        exec "r !yapf -i"
-    else
-        exec "normal gg=G"
-        return
-    endif
-    exec "e! %"
-endfunc
+"func! FormartSrc()
+"    exec "w"
+"    if &filetype == 'py'||&filetype == 'python'
+"        "exec "r !autopep8 -i --aggressive --ignore=E501 %"
+"        "change 79 to 120
+"        "exec "r !yapf --style ~/.yapf/style.cfg -i %"
+"        exec "r !yapf -i"
+"    else
+"        exec "normal gg=G"
+"        return
+"    endif
+"    exec "e! %"
+"endfunc
 "结束定义FormartSrc
+
+map <F8> : source ~/.vimrc<CR>
 
 set pastetoggle=<F9>
 
