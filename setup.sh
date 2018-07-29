@@ -10,7 +10,7 @@ elif which brew >/dev/null;then
     brew install vim git 
 fi
 
-# cp -r ~/.vim ~/.vim_old
+mv -r ~/.vim ~/.vim_old
 git clone https://github.com/killmymates/vimrc ~/.vim
 
 echo 'source ~/.vim/vimrcs/basic.vim
