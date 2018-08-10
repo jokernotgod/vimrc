@@ -25,15 +25,15 @@ let g:tagbar_right= 1
 " => Youcompleteme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 设置跳转到方法/函数定义的快捷键
-"nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"" 触发补全快捷键
-"let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
-"let g:ycm_auto_trigger = 1
-"" 最小自动触发补全的字符大小设置为 2
-"let g:ycm_min_num_of_chars_for_completion = 2
-"" YCM的previw窗口比较恼人，还是关闭比较好
-"set completeopt-=preview
+nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" 触发补全快捷键
+let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
+let g:ycm_auto_trigger = 1
+" 最小自动触发补全的字符大小设置为 2
+let g:ycm_min_num_of_chars_for_completion = 2
+" YCM的previw窗口比较恼人，还是关闭比较好
+set completeopt-=preview
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
