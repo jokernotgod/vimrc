@@ -38,7 +38,11 @@ autocmd BufNewFile * normal G
 
 "为方便复制，用<F2>开启/关闭行号显示:
 " nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
-nnoremap <F2> :set norelativenumber!<CR>
+nnoremap <F2> :call Setnonumber() <CR>
+func! Setnonumber()
+    exec "set norelativenumber"
+    exec "set nonumber"
+endfunc
 
 "列出当前目录文件  
 map <F3> :NERDTreeToggle<CR>
