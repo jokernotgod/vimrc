@@ -61,23 +61,23 @@ func! RunPyFile()
     endif
 endfunc
 
-map <F6> :PymodeLintAuto<CR>
-"map <F6> :call FormartSrc()<CR><CR>
+"map <F6> :PymodeLintAuto<CR>
+map <F6> :call FormartSrc()<CR><CR>
 
 "定义FormartSrc()
-"func! FormartSrc()
-"    exec "w"
-"    if &filetype == 'py'||&filetype == 'python'
-"        "exec "r !autopep8 -i --aggressive --ignore=E501 %"
-"        "change 79 to 120
-"        "exec "r !yapf --style ~/.yapf/style.cfg -i %"
-"        exec "r !yapf -i"
-"    else
-"        exec "normal gg=G"
-"        return
-"    endif
-"    exec "e! %"
-"endfunc
+func! FormartSrc()
+    exec "w"
+    if &filetype == 'py'||&filetype == 'python'
+        "exec "r !autopep8 -i --aggressive --ignore=E501 %"
+        "change 79 to 120
+        "exec "r !yapf --style ~/.yapf/style.cfg -i %"
+        exec "r !yapf -i"
+    else
+        exec "normal gg=G"
+        return
+    endif
+    exec "e! %"
+endfunc
 "结束定义FormartSrc
 
 map <F8> : source ~/.vimrc<CR>
