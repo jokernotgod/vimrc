@@ -7,7 +7,7 @@ if which apt-get >/dev/null; then
 ##Add HomeBrew support on  Mac OS
 elif which brew >/dev/null;then
     echo "You are using HomeBrew tool, I don't konw if it can work well"
-    brew install vim git 
+    brew install vim git cmake
 fi
 
 mv -f ~/.vim ~/.vim_old
