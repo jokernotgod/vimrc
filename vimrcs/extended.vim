@@ -68,10 +68,10 @@ map <F6> :call FormartSrc()<CR><CR>
 func! FormartSrc()
     exec "w"
     if &filetype == 'py'||&filetype == 'python'
-        "exec "r !autopep8 -i --aggressive --ignore=E501 %"
+        "exec 'r !autopep8 -i --aggressive --ignore=E501 %'
         "change 79 to 120
-        "exec "r !yapf --style ~/.yapf/style.cfg -i %"
-        exec "r !yapf -i"
+        "exec 'r !yapf --style ~/.yapf/style.cfg -i %'
+        exec 'r !yapf -i %'
     else
         exec "normal gg=G"
         return
