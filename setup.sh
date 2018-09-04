@@ -7,8 +7,10 @@ if which apt-get >/dev/null; then
 ##Add HomeBrew support on  Mac OS
 elif which brew >/dev/null;then
     echo "You are using HomeBrew tool, I don't konw if it can work well"
-    brew install vim git cmake
+    brew install vim git 
 fi
+# windows cmake
+# https://cmake.org/download/
 
 mv -f ~/.vim ~/.vim_old
 git clone https://github.com/killmymates/vimrc ~/.vim
@@ -19,5 +21,8 @@ source ~/.vim/vimrcs/plugins_config.vim
 source ~/.vim/vimrcs/extended.vim' > ~/.vimrc
 
 vim +PlugInstall +qall
+echo "vim plugins install success"
 
+#default python virtualenv
+pip install yapf
 echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
