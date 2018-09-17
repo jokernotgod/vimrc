@@ -28,7 +28,7 @@ func! SetTitle()
         call append(line("."), "")
     elseif &filetype == 'python'
         call setline(1,"#!/usr/bin/env python3")
-        call append(line("."),"# coding=utf-8")
+        "call append(line("."),"# coding=utf-8")
         call append(line(".")+1, "")
         call append(line(".")+8, "")
     endif
