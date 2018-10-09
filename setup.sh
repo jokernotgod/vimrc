@@ -24,5 +24,5 @@ vim +PlugInstall +qall
 echo "vim plugins install success"
 
 #default python virtualenv
-pip install yapf
+pip install yapf autopep8
 echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
