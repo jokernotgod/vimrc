@@ -81,9 +81,11 @@ func! FormartSrc()
 endfunc
 "结束定义FormartSrc
 
+map <F7> : bp<CR>
 map <F8> : source ~/.vimrc<CR>
+map <F9> : bn<CR>
 
-set pastetoggle=<F9>
+set pastetoggle=<F10>
 
 if has("autocmd")
     autocmd BufReadPost *
