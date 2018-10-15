@@ -61,8 +61,8 @@ func! RunPyFile()
     endif
 endfunc
 
-"map <F6> :PymodeLintAuto<CR>
-map <F6> :call FormartSrc()<CR><CR>
+"map <F1> :PymodeLintAuto<CR>
+map <F1> :call FormartSrc()<CR><CR>
 
 "定义FormartSrc()
 func! FormartSrc()
