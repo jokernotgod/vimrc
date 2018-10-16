@@ -7,11 +7,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'kevinw/pyflakes-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
 "Plug 'davidhalter/jedi-vim'
 "Plug 'klen/python-mode'
-"Plug 'kevinw/pyflakes-vim'
 "Plug 'scrooloose/syntastic'
 "Plug 'suan/vim-instant-markdown'
 "Plug 'pangloss/vim-javascript'
