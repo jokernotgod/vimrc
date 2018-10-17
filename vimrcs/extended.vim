@@ -67,6 +67,13 @@ map <F1> :call FormartSrc()<CR><CR>
 "定义FormartSrc()
 func! FormartSrc()
     exec "w"
+    if executable('autopep8')
+        echo "brew exists!"
+        continue
+    else
+        echo "installing autopep8, wait a moment..."
+        exec 'r !pip install autopep8'
+    endif
     if &filetype == 'py'||&filetype == 'python'
         exec 'r !autopep8 -i --aggressive --ignore=E501 %'
         "exec 'r !autopep8 -i %'
