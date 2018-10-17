@@ -68,8 +68,7 @@ map <F1> :call FormartSrc()<CR><CR>
 func! FormartSrc()
     exec "w"
     if executable('autopep8')
-        echo "brew exists!"
-        continue
+        echo "autopep8 exists, formating..."
     else
         echo "installing autopep8, wait a moment..."
         exec 'r !pip install autopep8'
