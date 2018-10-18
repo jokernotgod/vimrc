@@ -64,14 +64,8 @@ endfunc
 "结束定义FormartSrc
 
 
-"列出当前目录文件  
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC> :NERDTreeToggle<CR>
-
-nmap <F4> :TagbarToggle<CR>
-
 "run python file
-map <F5> :call RunPyFile()<CR>
+map <F2> :call RunPyFile()<CR>
 func! RunPyFile()
     exec "w"
     if &filetype == 'python'
@@ -81,6 +75,12 @@ func! RunPyFile()
     endif
 endfunc
 
+
+"列出当前目录文件  
+map <F3> :NERDTreeToggle<CR>
+imap <F3> <ESC> :NERDTreeToggle<CR>
+
+nmap <F4> :TagbarToggle<CR>
 
 map <F7> : bp<CR>
 map <F8> : source ~/.vimrc<CR>
