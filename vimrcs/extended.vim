@@ -36,30 +36,6 @@ func! SetTitle()
 endfunc
 autocmd BufNewFile * normal G
 
-"为方便复制，用<F2>开启/关闭行号显示:
-" nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
-nnoremap <F2> :call Setnonumber() <CR>
-func! Setnonumber()
-    exec "set norelativenumber"
-    exec "set nonumber"
-endfunc
-
-"列出当前目录文件  
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC> :NERDTreeToggle<CR>
-
-nmap <F4> :TagbarToggle<CR>
-
-"run python file
-map <F5> :call RunPyFile()<CR>
-func! RunPyFile()
-    exec "w"
-    if &filetype == 'python'
-        exec "!time ~/.virtualenv/py3/bin/python %"
-    else
-        echo &filetype
-    endif
-endfunc
 
 "map <F1> :PymodeLintAuto<CR>
 map <F1> :call FormartSrc()<CR><CR>
@@ -87,11 +63,40 @@ func! FormartSrc()
 endfunc
 "结束定义FormartSrc
 
+
+"列出当前目录文件  
+map <F3> :NERDTreeToggle<CR>
+imap <F3> <ESC> :NERDTreeToggle<CR>
+
+nmap <F4> :TagbarToggle<CR>
+
+"run python file
+map <F5> :call RunPyFile()<CR>
+func! RunPyFile()
+    exec "w"
+    if &filetype == 'python'
+        exec "!time ~/.virtualenv/py3/bin/python %"
+    else
+        echo &filetype
+    endif
+endfunc
+
+
 map <F7> : bp<CR>
 map <F8> : source ~/.vimrc<CR>
 map <F9> : bn<CR>
 
 set pastetoggle=<F10>
+
+"为方便复制，用<F2>开启/关闭行号显示:
+" nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+ 
+nnoremap <F11> :call Setnonumber() <CR>
+func! Setnonumber()
+    exec "set norelativenumber"
+    exec "set nonumber"
+endfunc
+nnoremap <F12> :set relativenumber <CR>
 
 if has("autocmd")
     autocmd BufReadPost *
