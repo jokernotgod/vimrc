@@ -51,7 +51,7 @@ func! FormartSrc()
     endif
     if &filetype == 'py'||&filetype == 'python'
         exec 'r !autopep8 -i --aggressive --ignore=E501 %'
-        "exec 'r !autopep8 -i %'
+        "exec 'r !autopep8 -i --max-line-length 80 %'
         "change 79 to 120
         "exec 'r !yapf --style ~/.yapf/style.cfg -i %'
         "exec 'r !yapf -i %'
