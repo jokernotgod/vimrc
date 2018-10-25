@@ -70,6 +70,8 @@ func! RunPyFile()
     exec "w"
     if &filetype == 'python'
         exec "!time ~/.virtualenv/py3/bin/python %"
+    elseif &filetype == 'go'
+        exec "!time go run % "
     else
         echo &filetype
     endif

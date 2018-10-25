@@ -10,6 +10,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kevinw/pyflakes-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
+Plug 'fatih/vim-go'
+
+
 "Plug 'vim-syntastic/syntastic'
 "Plug 'davidhalter/jedi-vim'
 "Plug 'klen/python-mode'
