@@ -83,7 +83,6 @@ imap <F3> <ESC> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
 
 map <F7> : bp<CR>
-map <F8> : source ~/.vimrc<CR>
 map <F9> : bn<CR>
 
 set pastetoggle=<F10>
@@ -97,11 +96,4 @@ func! Setnonumber()
     exec "set nonumber"
 endfunc
 nnoremap <F12> :set relativenumber <CR>
-
-if has("autocmd")
-    autocmd BufReadPost *
-                \ if line("'\"") > 0 && line("'\"") <= line("$") |
-                \   exe "normal g`\"" |
-                \ endif
-endif
 
