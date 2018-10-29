@@ -85,3 +85,5 @@ let g:multi_cursor_next_key="\<C-s>"
 "let g:pymode_warnings = 1
 "let g:pymode_quickfix_minheight = 3
 "let g:pymode_quickfix_maxheight = 6
+
+let g:go_version_warning = 0
