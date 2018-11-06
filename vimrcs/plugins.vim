@@ -12,7 +12,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive 
 
 Plug 'fatih/vim-go'
 
-
+"Plug 'sheerun/vim-polyglot'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'davidhalter/jedi-vim'
 "Plug 'klen/python-mode'
