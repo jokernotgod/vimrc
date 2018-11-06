@@ -43,17 +43,18 @@ map <F1> :call FormartSrc()<CR><CR>
 "定义FormartSrc()
 func! FormartSrc()
     exec "w"
-    if executable('autopep8')
-        echo "autopep8 exists, formating..."
+    if executable('yapf')
+        echo "yapf exists, formating..."
     else
-        echo "installing autopep8, wait a moment..."
-        exec 'r !pip install autopep8'
+        echo "installing yapf, wait a moment..."
+        exec 'r !pip install yapf'
     endif
     if &filetype == 'py'||&filetype == 'python'
-        exec 'r !autopep8 -i --aggressive --ignore=E501 %'
+        "exec 'r !autopep8 -i --aggressive --ignore=E501 %'
+        " 废弃autopep8 执行peewee的查询语句时会把 `== None` 改成 `is None`, peewee报错
         "exec 'r !autopep8 -i --max-line-length 80 %'
         "change 79 to 120
-        "exec 'r !yapf --style ~/.yapf/style.cfg -i %'
+        exec 'r !yapf --style ~/.yapf/style.cfg -i %'
         "exec 'r !yapf -i %'
     else
         exec "normal gg=G"
