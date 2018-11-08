@@ -13,7 +13,7 @@ fi
 # https://cmake.org/download/
 
 mv -f ~/.vim ~/.vim_old
-git clone https://github.com/killmymates/vimrc ~/.vim
+git clone https://github.com/formateddd/vimrc ~/.vim
 
 echo 'source ~/.vim/vimrcs/basic.vim
 source ~/.vim/vimrcs/plugins.vim
