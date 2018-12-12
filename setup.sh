@@ -12,24 +12,21 @@ fi
 # windows cmake
 # https://cmake.org/download/
 
+
 vim_path = '~/.vim'
 if [ ! -d "$vim_path"]; then
     mv -f ~/.vim ~/.vim_old
 fi
 git clone https://github.com/formateddd/vimrc ~/.vim
 
-if which yum >/dev/null;then
-    echo 'source ~/.vim/vimrcs/basic.vim
-    source ~/.vim/vimrcs/extended.vim' > ~/.vimrc
-else:
-    echo 'source ~/.vim/vimrcs/basic.vim
-    source ~/.vim/vimrcs/plugins.vim
-    source ~/.vim/vimrcs/plugins_config.vim
-    source ~/.vim/vimrcs/extended.vim' > ~/.vimrc
 
-    vim +PlugInstall +qall
-    echo "vim plugins install success"
-fi
+echo 'source ~/.vim/vimrcs/basic.vim
+source ~/.vim/vimrcs/plugins.vim
+source ~/.vim/vimrcs/plugins_config.vim
+source ~/.vim/vimrcs/extended.vim' > ~/.vimrc
+
+vim +PlugInstall +qall
+echo "vim plugins install success"
 
 
 # default python virtualenv
