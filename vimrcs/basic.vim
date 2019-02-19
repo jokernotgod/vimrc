@@ -165,9 +165,6 @@ nnoremap <expr> N  'nN'[v:searchforward]
 
 " 打开文件时恢复光标位置
 if has("autocmd")
-    autocmd BufReadPost *
-                \ if line("'\"") > 0 && line("'\"") <= line("$") |
-                \   exe "normal g`\"" |
-                \ endif
+    autocmd BufReadPost *  if line("'\"") > 0 && line("'\"") <= line("$") |   exe "normal g`\"" |  endif
 endif
 

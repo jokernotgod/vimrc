@@ -18,6 +18,8 @@ if [ ! -d "$vim_path"]; then
     mv -f ~/.vim ~/.vim_old
 fi
 git clone https://github.com/formateddd/vimrc ~/.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
 echo 'source ~/.vim/vimrcs/basic.vim
