@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 " 补全括号
 Plug 'Raimondi/delimitMate'
-Plug 'rhysd/vim-fixjson'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
