@@ -13,7 +13,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-noremap H ^
+noremap H 0
 noremap L $
 
 " 调整缩进后自动选中，方便再次操作
