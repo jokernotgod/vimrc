@@ -87,6 +87,7 @@ imap <F3> <ESC> :NERDTreeToggle<CR>
 
 nmap <F4> :TagbarToggle<CR>
 
+map <F5> :YcmRestartServer<CR>
 map <F7> : bp<CR>
 map <F9> : bn<CR>
 
