@@ -1,20 +1,19 @@
 "以下是改键
 
-" With a map leader it's possible to do extra key combinations
-let mapleader="\<Space>"
-let g:mapleader="\<Space>" 
-"let mapleader = ";"
-"let g:mapleader = ";"
-
-nmap <Leader>y :!ici <C-R><C-W><CR>
-
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
 noremap H 0
 noremap L $
+
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
 
 " 调整缩进后自动选中，方便再次操作
 vnoremap < <gv
@@ -66,8 +65,8 @@ endfunc
 
 
 "run python file
-map <F2> :call RunPyFile()<CR>
-func! RunPyFile()
+map <F2> :call RunPyGoFile()<CR>
+func! RunPyGoFile()
     exec "w"
     if &filetype == 'python'
         exec "!time ~/.virtualenv/py3/bin/python %"
