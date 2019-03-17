@@ -7,10 +7,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kevinw/pyflakes-vim'
+Plug 'Chiel92/vim-autoformat'
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
 Plug 'fatih/vim-go'
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
 
 "Plug 'vim-syntastic/syntastic'
 "Plug 'davidhalter/jedi-vim'
