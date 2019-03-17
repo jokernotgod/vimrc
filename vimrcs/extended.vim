@@ -79,14 +79,18 @@ func! RunPyGoFile()
     endif
 endfunc
 
+command! JsonFormat :execute '%!python2.7 -m json.tool'
+            \ | :execute '%!python2.7 -c "import re,sys;sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"), sys.stdin.read()))"'
 
-"列出当前目录文件  
+
+"列出当前目录文件
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
 
 nmap <F4> :TagbarToggle<CR>
 
-map <F5> :YcmRestartServer<CR>
+"map <F5> :YcmRestartServer<CR>
+
 map <F7> : bp<CR>
 map <F9> : bn<CR>
 
@@ -94,7 +98,7 @@ set pastetoggle=<F10>
 
 "为方便复制，用<F2>开启/关闭行号显示:
 " nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
- 
+
 nnoremap <F11> :call Setnonumber() <CR>
 func! Setnonumber()
     exec "set norelativenumber"
