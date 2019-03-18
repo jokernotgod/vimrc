@@ -3,8 +3,8 @@
 InstallVim(){
     echo "installing..."
     if which apt-get >/dev/null; then
-        sudo apt-get install -y vim git cmake python3-dev libncurses5-dev build-essential 
-    ##Add HomeBrew support on  Mac OS
+        sudo apt-get install -y vim git cmake python3-dev libncurses5-dev build-essential
+        ##Add HomeBrew support on  Mac OS
     elif which brew >/dev/null;then
         echo "You are using HomeBrew tool, I don't konw if it can work well"
         brew install vim git cmake
@@ -44,7 +44,7 @@ SimpleInstall(){
 }
 
 if [ $1 == 0 ]
-then 
+then
     echo "$1"
     echo "simple installing..."
     JudgeVimPath
