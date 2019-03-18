@@ -25,7 +25,7 @@ let g:tagbar_right= 1
 " => Youcompleteme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "设置跳转到方法/函数定义的快捷键
-nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>  
+nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " 触发补全快捷键
 let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
@@ -37,22 +37,15 @@ let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
 let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 0     "注释和字符串中的文字也会被收入补全
 let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'nerdtree' : 1,
-      \}   " 设置在下面几种格式的文件上屏蔽ycm
+            \ 'tagbar' : 1,
+            \ 'nerdtree' : 1,
+            \}   " 设置在下面几种格式的文件上屏蔽ycm
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_next_key="\<C-s>"
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-autoformat
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufWrite * :Autoformat
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)

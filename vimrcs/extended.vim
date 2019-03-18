@@ -35,9 +35,11 @@ func! SetTitle()
 endfunc
 autocmd BufNewFile * normal G
 
+"au BufWrite *.sh,*.py exec ":Autoformat"
+map <F1> :Autoformat<CR>
 
 "map <F1> :PymodeLintAuto<CR>
-map <F1> :call FormartSrc()<CR><CR>
+"map <F1> :call FormartSrc()<CR><CR>
 
 "定义FormartSrc()
 func! FormartSrc()
