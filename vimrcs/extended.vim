@@ -76,6 +76,8 @@ func! RunPyGoFile()
         exec "!time go run % "
     elseif &filetype == 'sh'
         exec "!time sh %"
+    elseif &filetype == 'javascript.jsx'
+        exec "!time node %"
     else
         echo &filetype
     endif
