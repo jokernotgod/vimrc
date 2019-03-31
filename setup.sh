@@ -43,19 +43,22 @@ SimpleInstall(){
     source ~/.vim/vimrcs/extended.vim' > ~/.vimrc
 }
 
-if [ $1 == 0 ]
+if [ $1 = 0 ]
 then
     echo "$1"
     echo "simple installing..."
     JudgeVimPath
     SimpleInstall
-elif [ $1 == 1 ]
+elif [ $1 = 1 ]
 then
     echo "$1"
     echo "completely installing..."
     InstallVim
     JudgeVimPath
     CompletelyInstall
+elif [ $1 = 2 ]
+then
+    echo "hello"
 else
     echo "param needs 0 or 1, 0 means simple install and 1 means completely install"
 fi
