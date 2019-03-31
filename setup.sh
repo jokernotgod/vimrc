@@ -3,7 +3,7 @@
 InstallVim(){
     echo "installing..."
     if which apt-get >/dev/null; then
-        sudo apt-get install -y vim git cmake python3-dev libncurses5-dev build-essential
+        sudo apt-get install -y vim git cmake python3-dev libncurses5-dev build-essential curl
     elif which brew >/dev/null;then
         brew install vim git cmake
     else
