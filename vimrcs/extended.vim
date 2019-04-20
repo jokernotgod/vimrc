@@ -65,7 +65,6 @@ func! FormartSrc()
 endfunc
 "结束定义FormartSrc
 
-
 "run python file
 map <F2> :call RunPyGoFile()<CR>
 func! RunPyGoFile()
@@ -94,6 +93,18 @@ imap <F3> <ESC> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
 
 "map <F5> :YcmRestartServer<CR>
+
+map <F5> :call RepalcePrint() <CR>
+"正则替换py2中print写法
+func! RepalcePrint()
+    exec "w"
+    try
+        :%s/print \(.*\)/print(\1)/g
+        echo "replace success !"
+    catch /.*/
+        echo "Caught error: " . v:exception
+    endtry
+endfunc
 
 map <F7> : bp<CR>
 map <F9> : bn<CR>
