@@ -101,7 +101,8 @@ set cursorcolumn
 " Enable syntax highlighting
 syntax enable 
 
-color monokai
+" color monokai
+color space_vim_theme
 "https://github.com/flazz/vim-colorschemes
 "set background=dark
 
