@@ -10,6 +10,7 @@ Plug 'kevinw/pyflakes-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
+Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
 

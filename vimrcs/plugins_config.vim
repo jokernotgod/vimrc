@@ -86,3 +86,12 @@ let g:multi_cursor_next_key="\<C-s>"
 "let g:pymode_quickfix_maxheight = 6
 
 let g:go_version_warning = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => indentLine
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 支持任意ASCII码，也可以使用特殊字符：¦, ┆, or │ ，但只在utf-8编码下有效
+let g:indentLine_char='¦'
+
+" 使indentline生效
+let g:indentLine_enabled = 1
