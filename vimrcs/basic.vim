@@ -169,3 +169,5 @@ if has("autocmd")
     autocmd BufReadPost *  if line("'\"") > 0 && line("'\"") <= line("$") |   exe "normal g`\"" |  endif
 endif
 
+autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
