@@ -104,7 +104,7 @@ syntax enable
 " color monokai
 color space_vim_theme
 "https://github.com/flazz/vim-colorschemes
-"set background=dark
+set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
