@@ -39,9 +39,7 @@ CompletelyInstall(){
 }
 
 SimpleInstall(){
-    git clone https://github.com/formateddd/vimrc ~/.vim
-    echo 'source ~/.vim/vimrcs/basic.vim
-    source ~/.vim/vimrcs/extended.vim' > ~/.vimrc
+    wget -O ~/.vimrc https://raw.githubusercontent.com/formateddd/vimrc/master/vimrcs/simple_vimrc
 }
 
 if [ $1 = 0 ]
