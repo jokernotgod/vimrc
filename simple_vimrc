@@ -1,0 +1,175 @@
+" https://github.com/formateddd/vimrc/blob/master/vimrcs/basic.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set number
+set relativenumber
+" Sets how many lines of history VIM has to remember
+set history=500
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Fast saving
+" nmap <leader>w :w!<cr>
+" :W sudo saves the file 
+" (useful for handling the permission-denied error)
+command W w 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set 5 lines to the cursor - when moving vertically using j/k
+set so=5
+
+" Avoid garbled characters in Chinese language windows OS
+let $LANG='en' 
+set langmenu=en
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+" Turn on the WiLd menu
+set wildmenu
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+"Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=2
+
+
+"以下是改键
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+noremap H 0
+noremap L $
+
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
+
+" 调整缩进后自动选中，方便再次操作
+vnoremap < <gv
+vnoremap > >gv
+
+"新建.py,.sh文件，自动插入文件头
+autocmd BufNewFile *.* exec ":call SetTitle()"
+func! SetTitle()
+    if &filetype == 'sh'
+        call setline(1,"\#!/bin/bash")
+        call append(line("."), "")
+    elseif &filetype == 'python'
+        call setline(1,"#!/usr/bin/env python3")
+        "call append(line("."),"# coding=utf-8")
+        call append(line(".")+1, "")
+        call append(line(".")+8, "")
+    endif
+    "新建文件后，自动定位到文件末尾
+endfunc
+autocmd BufNewFile * normal G
+
+"au BufWrite *.sh,*.py exec ":Autoformat"
+"map <F1> :Autoformat<CR>
+
+"map <F1> :PymodeLintAuto<CR>
+map <F1> :call FormartSrc()<CR><CR>
+
+"定义FormartSrc()
+func! FormartSrc()
+    exec "w"
+    if executable('yapf')
+        echo "yapf exists, formating..."
+    else
+        echo "installing yapf, wait a moment..."
+        exec 'r !pip install yapf'
+    endif
+    if &filetype == 'py'||&filetype == 'python'
+        "exec 'r !autopep8 -i --aggressive --ignore=E501 %'
+        " 废弃autopep8 执行peewee的查询语句时会把 `== None` 改成 `is None`, peewee报错
+        "exec 'r !autopep8 -i --max-line-length 80 %'
+        "change 79 to 120
+        exec 'r !yapf --style ~/.yapf/style.cfg -i %'
+        "exec 'r !yapf -i %'
+    else
+        exec "normal gg=G"
+        return
+    endif
+    exec "e! %"
+endfunc
+"结束定义FormartSrc
+
+"run python file
+map <F2> :call RunPyGoFile()<CR>
+func! RunPyGoFile()
+    exec "w"
+    if &filetype == 'python'
+        exec "!time ~/.virtualenv/py3/bin/python %"
+    elseif &filetype == 'go'
+        exec "!time go run % "
+    elseif &filetype == 'sh'
+        exec "!time sh %"
+    elseif &filetype == 'javascript.jsx'
+        exec "!time node %"
+    else
+        echo &filetype
+    endif
+endfunc
+
+command! JsonFormat :execute '%!python2.7 -m json.tool'
+            \ | :execute '%!python2.7 -c "import re,sys;sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"), sys.stdin.read()))"'
+
+
+"列出当前目录文件
+map <F3> :NERDTreeToggle<CR>
+imap <F3> <ESC> :NERDTreeToggle<CR>
+
+nmap <F4> :TagbarToggle<CR>
+
+"map <F5> :YcmRestartServer<CR>
+
+map <F5> :call RepalcePrint() <CR>
+"正则替换py2中print写法
+func! RepalcePrint()
+    exec "w"
+    try
+        :%s/print \(.*\)/print(\1)/g
+        echo "replace success !"
+    catch /.*/
+        echo "Caught error: " . v:exception
+    endtry
+endfunc
+
+map <F7> : bp<CR>
+map <F9> : bn<CR>
+
+set pastetoggle=<F10>
+
+"为方便复制，用<F2>开启/关闭行号显示:
+" nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+
+nnoremap <F11> :call Setnonumber() <CR>
+func! Setnonumber()
+    exec "set norelativenumber"
+    exec "set nonumber"
+endfunc
+nnoremap <F12> :set relativenumber <CR>
+
