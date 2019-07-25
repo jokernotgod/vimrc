@@ -41,6 +41,7 @@ let g:ycm_filetype_blacklist = {
             \ 'nerdtree' : 1,
             \}   " 设置在下面几种格式的文件上屏蔽ycm
 
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
