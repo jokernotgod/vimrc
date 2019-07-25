@@ -9,6 +9,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kevinw/pyflakes-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
+Plug 'zxqfl/tabnine-vim'
 
 Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
@@ -22,6 +23,7 @@ Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
 "Plug 'pangloss/vim-javascript'
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
+"Plug 'tpope/vim-surround
 
 call plug#end()
 
