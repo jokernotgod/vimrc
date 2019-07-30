@@ -20,7 +20,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 "新建.py,.sh文件，自动插入文件头
-autocmd BufNewFile *.sh,*.py exec ":call SetTitle()"
+"autocmd BufNewFile *.sh,*.py exec ":call SetTitle()"
 func! SetTitle()
     if &filetype == 'sh'
         call setline(1,"\#!/bin/bash")
@@ -36,32 +36,30 @@ endfunc
 autocmd BufNewFile * normal G
 
 "au BufWrite *.sh,*.py exec ":Autoformat"
-map <F1> :Autoformat<CR>
+"map <F1> :Autoformat<CR>
 
 "map <F1> :PymodeLintAuto<CR>
-"map <F1> :call FormartSrc()<CR><CR>
+map <F1> :call FormartSrc()<CR><CR>
 
 "定义FormartSrc()
 func! FormartSrc()
     exec "w"
-    if executable('yapf')
-        echo "yapf exists, formating..."
-    else
-        echo "installing yapf, wait a moment..."
-        exec 'r !pip install yapf'
-    endif
     if &filetype == 'py'||&filetype == 'python'
         "exec 'r !autopep8 -i --aggressive --ignore=E501 %'
         " 废弃autopep8 执行peewee的查询语句时会把 `== None` 改成 `is None`, peewee报错
         "exec 'r !autopep8 -i --max-line-length 80 %'
         "change 79 to 120
-        exec 'r !yapf --style ~/.yapf/style.cfg -i %'
-        "exec 'r !yapf -i %'
+        if executable('yapf')
+            echo "yapf exists, formating..."
+        else
+            echo "installing yapf, wait a moment..."
+            exec 'r !pip install yapf'
+        endif
+        exec 'r !yapf --style ~/.vim/config/style.cfg -i %'
     else
-        exec "normal gg=G"
         return
     endif
-    exec "e! %"
+    echo &filetype
 endfunc
 "结束定义FormartSrc
 
