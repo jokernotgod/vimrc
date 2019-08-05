@@ -6,6 +6,15 @@ set relativenumber
 " Sets how many lines of history VIM has to remember
 set history=500
 
+" share system clipboard
+if has('clipboard')
+    if has('unnamedplus')  " When possible use + register for copy-paste
+        set clipboard=unnamed,unnamedplus
+    else  " On mac and Windows, use * register for copy-paste
+        set clipboard=unnamed
+    endif
+endif
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -15,9 +24,9 @@ set autoread
 
 " Fast saving
 " nmap <leader>w :w!<cr>
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
-command W w 
+command W w
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -26,7 +35,7 @@ command W w
 set so=5
 
 " Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
+let $LANG='en'
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
@@ -58,7 +67,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -66,16 +75,16 @@ set hlsearch
 
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -99,7 +108,7 @@ set cursorcolumn
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 " color monokai
 color space_vim_theme
