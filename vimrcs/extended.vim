@@ -112,10 +112,10 @@ set pastetoggle=<F10>
 "为方便复制，用<F2>开启/关闭行号显示:
 " nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
-nnoremap <F11> :call Setnonumber() <CR>
-func! Setnonumber()
-    exec "set norelativenumber"
-    exec "set nonumber"
-endfunc
-nnoremap <F12> :set relativenumber <CR>
+" nnoremap <F11> :call Setnonumber() <CR>
+" func! Setnonumber()
+"     exec "set norelativenumber"
+"     exec "set nonumber"
+" endfunc
+" nnoremap <F12> :set relativenumber <CR>
 
