@@ -25,10 +25,7 @@ CompletelyInstall(){
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    echo 'source ~/.vim/vimrcs/basic.vim
-    source ~/.vim/vimrcs/plugins.vim
-    source ~/.vim/vimrcs/plugins_config.vim
-    source ~/.vim/vimrcs/extended.vim' > ~/.vimrc
+    cp ~/.vim/config/vimrc ~/.vimrc
 
     vim +PlugInstall +qall
     echo "vim plugins install success"
