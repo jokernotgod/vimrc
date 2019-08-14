@@ -24,6 +24,11 @@ Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 "Plug 'tpope/vim-surround
+"Plug 'sbdchd/neoformat'
+"Plug 'mattn/emmet-vim'
+"html
+"Plug 'scrooloose/nerdcommenter' 注释
+
 
 call plug#end()
 
