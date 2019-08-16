@@ -1,4 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
@@ -22,8 +21,6 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" Fast saving
-" nmap <leader>w :w!<cr>
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
 command W w
@@ -31,8 +28,8 @@ command W w
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 5 lines to the cursor - when moving vertically using j/k
-set so=5
+" Set 3 lines to the cursor - when moving vertically using j/k
+set so=3
 
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en'
@@ -94,10 +91,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
-endif
 
 " 突出显示当前行
 set cursorline
@@ -110,8 +103,8 @@ set cursorcolumn
 " Enable syntax highlighting
 syntax enable
 
-" color monokai
-color space_vim_theme
+color monokai
+" color space_vim_theme
 "https://github.com/flazz/vim-colorschemes
 set background=dark
 
@@ -173,7 +166,7 @@ nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 
 
-" 打开文件时恢复光标位置
+"打开文件时恢复光标位置
 if has("autocmd")
     autocmd BufReadPost *  if line("'\"") > 0 && line("'\"") <= line("$") |   exe "normal g`\"" |  endif
 endif
