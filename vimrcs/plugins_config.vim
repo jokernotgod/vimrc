@@ -61,20 +61,21 @@ let g:multi_cursor_next_key="\<C-s>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "取消代码折叠
 "let g:pymode_options_colorcolumn = 1
-""开启补全，并设置<C-Tab>为默认快捷键
-""let g:pymode_rope_completion = 1
-""let g:pymode_rope_complete_on_dot = 1
-""let g:pymode_rope_completion_bind = '<Tab>'
+"开启补全，并设置<C-Tab>为默认快捷键
+"let g:pymode_rope_completion = 1
+"let g:pymode_rope_complete_on_dot = 1
+"let g:pymode_rope_completion_bind = '<TAB>'
 "
 "let g:pymode_folding = 0
 "let g:pymode_options_max_line_length = 119
 "let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
 ""修改后保存时进行检查
-""let g:pymode_lint_on_write = 0
+"let g:pymode_lint_on_write = 0
 ""不在父目录下查找.ropeproject，能提升响应速度
+"let g:pymode_rope = 0
 "let g:pymode_rope_lookup_project = 0
 ""项目修改后重新生成缓存
-""let g:pymode_rope_regenerate_on_write = 1
+"let g:pymode_rope_regenerate_on_write = 1
 ""Skip errors and warnings                                 *'g:pymode_lint_ignore'*
 ""E.g. ["W", "E2"] (Skip all Warnings and the Errors starting with E2) etc.
 "let g:pymode_lint_ignore = ["E501"]
