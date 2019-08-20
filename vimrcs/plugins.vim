@@ -7,12 +7,12 @@ Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-syntastic/syntastic'
 Plug 'Chiel92/vim-autoformat'
+Plug 'Yggdroot/indentLine' "displaying thin vertical lines
+Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
 "Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
-Plug 'Yggdroot/indentLine' "displaying thin vertical lines
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
 
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'zxqfl/tabnine-vim'
 "Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 "Plug 'davidhalter/jedi-vim'
