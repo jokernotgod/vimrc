@@ -14,6 +14,10 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
+set foldmethod=indent
+nnoremap <space> zA
+vnoremap <space> zc
+
 
 " 调整缩进后自动选中，方便再次操作
 vnoremap < <gv
