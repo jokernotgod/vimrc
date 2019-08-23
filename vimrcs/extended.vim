@@ -9,14 +9,16 @@ map <C-l> <C-W>l
 noremap H 0
 noremap L $
 
-nnoremap k gk
-nnoremap gk k
-nnoremap j gj
-nnoremap gj j
+"nnoremap k gk
+"nnoremap gk k
+"nnoremap j gj
+"nnoremap gj j
 
 set foldmethod=indent
 nnoremap <space> zA
 vnoremap <space> zc
+
+inoremap jj <ESC>
 
 
 " 调整缩进后自动选中，方便再次操作
