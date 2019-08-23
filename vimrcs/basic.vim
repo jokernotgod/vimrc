@@ -5,6 +5,8 @@ set relativenumber
 " Sets how many lines of history VIM has to remember
 set history=500
 
+set mouse-=a
+
 " share system clipboard
 if has('clipboard')
     if has('unnamedplus')  " When possible use + register for copy-paste
