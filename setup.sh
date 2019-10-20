@@ -15,7 +15,9 @@ InstallVim(){
 
 JudgeVimPath(){
     if [ ! -d "~/.vim" ]; then
-        mv -f ~/.vim ~/.vim_old
+        filename=`date '+%Y%m%d'`
+        echo $filename
+        mv -f ~/.vim ~/.vim_old$filename
     fi
 }
 
@@ -54,7 +56,9 @@ InstallNvim(){
 
 JudgeNvimPath(){
     if [ ! -d "~/.config/nvim" ]; then
-        mv -f ~/.config/nvim ~/.config/nvim_old
+        filename=`date '+%Y%m%d'`
+        echo $filename
+        mv -f ~/.config/nvim ~/.config/nvim_old$filename
     fi
 }
 
@@ -62,7 +66,7 @@ JudgeNvimPath(){
 CompletelyInstallNvim(){
     git clone https://github.com/formateddd/vimrc ~/.config/nvim
 
-    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     cp ~/.config/nvim/config/nvimrc ~/.config/nvim/init.vim
