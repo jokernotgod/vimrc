@@ -19,7 +19,7 @@ JudgeVimPath(){
     fi
 }
 
-CompletelyInstall(){
+CompletelyInstallVim(){
     git clone https://github.com/formateddd/vimrc ~/.vim
 
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -35,27 +35,75 @@ CompletelyInstall(){
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
-SimpleInstall(){
+SimpleInstallVim(){
     wget -O ~/.vimrc https://raw.githubusercontent.com/formateddd/vimrc/master/vimrcs/simple_vimrc
 }
 
+InstallNvim(){
+    echo "installing..."
+    if which apt-get >/dev/null; then
+        sudo apt-get install -y neovim git cmake python3-dev libncurses5-dev build-essential curl
+    elif which brew >/dev/null;then
+        brew install neovim git cmake
+    else
+        echo "CentOS or other system will install without plugins"
+    fi
+    # windows cmake
+    # https://cmake.org/download/
+}
+
+JudgeNvimPath(){
+    if [ ! -d "~/.config/nvim" ]; then
+        mv -f ~/.config/nvim ~/.config/nvim_old
+    fi
+}
+
+
+CompletelyInstallNvim(){
+    git clone https://github.com/formateddd/vimrc ~/.config/nvim
+
+    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    cp ~/.config/nvim/config/nvimrc ~/.config/nvim/init.vim
+
+    nvim +PlugInstall +qall
+    echo "vim plugins install success"
+
+    # default python virtualenv
+    pip install yapf autopep8
+    echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
+}
+
+SimpleInstallNvim(){
+    curl -fLo ~/.config/nvim/init.vim --create-dirs \
+        https://raw.githubusercontent.com/formateddd/vimrc/master/vimrcs/simple_vimrc
+}
+
+
 if [ $1 = 0 ]
 then
-    echo "$1"
-    echo "simple installing..."
+    echo "simple installing vim..."
     JudgeVimPath
-    SimpleInstall
+    SimpleInstallVim
 elif [ $1 = 1 ]
 then
-    echo "$1"
-    echo "completely installing..."
+    echo "completely installing vim..."
     InstallVim
     JudgeVimPath
-    CompletelyInstall
+    CompletelyInstallVim
 elif [ $1 = 2 ]
 then
-    echo "hello"
+    echo "simple installing nvim..."
+    JudgeNvimPath
+    SimpleInstallNvim
+elif [ $1 = 3 ]
+then
+    echo "completely installing nvim..."
+    InstallNvim
+    JudgeNvimPath
+    CompletelyInstallNvim
 else
-    echo "param needs 0 or 1, 0 means simple install and 1 means completely install"
+    echo "param error"
 fi
 
