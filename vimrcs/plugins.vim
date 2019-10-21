@@ -5,18 +5,18 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'vim-syntastic/syntastic'
+Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' "displaying thin vertical lines
 Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
-"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
+Plug 'Yggdroot/indentLine'
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
 
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'zxqfl/tabnine-vim'
 "Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 "Plug 'davidhalter/jedi-vim'
-"Plug 'scrooloose/syntastic'
 "Plug 'suan/vim-instant-markdown'
 "Plug 'pangloss/vim-javascript'
 "Plug 'SirVer/ultisnips'
