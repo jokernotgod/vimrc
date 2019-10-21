@@ -10,7 +10,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' "displaying thin vertical lines
 Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
 Plug 'Yggdroot/indentLine'
-Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
+"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
 
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
