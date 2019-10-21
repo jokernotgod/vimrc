@@ -33,7 +33,7 @@ CompletelyInstallVim(){
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install yapf autopep8
+    pip install yapf autopep8 neovim
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
