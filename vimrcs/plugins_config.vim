@@ -94,7 +94,7 @@ let g:go_version_warning = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 支持任意ASCII码，也可以使用特殊字符：¦, ┆, or │ ，但只在utf-8编码下有效
 " let g:indentLine_char='�'
-let g:indentLine_char_list = ['|', '�', '�', '�']
+let g:indentLine_char_list = ['�']
 
 " 使indentline生效
 let g:indentLine_enabled = 1
