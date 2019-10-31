@@ -22,26 +22,31 @@ let g:tagbar_autofocus=1
 let g:tagbar_right= 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Jeid
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:jedi#completions_command = '<c-n>'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Youcompleteme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "设置跳转到方法/函数定义的快捷键
-nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" 触发补全快捷键
-let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
-let g:ycm_auto_trigger = 1
-let g:ycm_min_num_of_chars_for_completion = 2   " 最小自动触发补全的字符大小设置为 2
-set completeopt-=preview    " YCM的previw窗口比较恼人，还是关闭比较好
-let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
-let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
-let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
-let g:ycm_collect_identifiers_from_comments_and_strings = 0     "注释和字符串中的文字也会被收入补全
-let g:ycm_filetype_blacklist = {
-            \ 'tagbar' : 1,
-            \ 'nerdtree' : 1,
-            \}   " 设置在下面几种格式的文件上屏蔽ycm
-
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+" nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" " 触发补全快捷键
+" let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
+" let g:ycm_auto_trigger = 1
+" let g:ycm_min_num_of_chars_for_completion = 2   " 最小自动触发补全的字符大小设置为 2
+" set completeopt-=preview    " YCM的previw窗口比较恼人，还是关闭比较好
+" let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
+" let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
+" let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
+" let g:ycm_collect_identifiers_from_comments_and_strings = 0     "注释和字符串中的文字也会被收入补全
+" let g:ycm_filetype_blacklist = {
+"             \ 'tagbar' : 1,
+"             \ 'nerdtree' : 1,
+"             \}   " 设置在下面几种格式的文件上屏蔽ycm
+" 
+" let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
@@ -93,8 +98,8 @@ let g:go_version_warning = 0
 " => indentLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 支持任意ASCII码，也可以使用特殊字符：¦, ┆, or │ ，但只在utf-8编码下有效
-" let g:indentLine_char='�'
-let g:indentLine_char_list = ['�']
+" let g:indentLine_char='�'
+let g:indentLine_char_list = ['�']
 
 " 使indentline生效
 let g:indentLine_enabled = 1
