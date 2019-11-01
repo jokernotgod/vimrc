@@ -25,6 +25,9 @@ let g:tagbar_right= 1
 " => Jeid
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:jedi#completions_command = '<c-n>'
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+let g:jedi#show_call_signatures = "2"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Youcompleteme
@@ -99,7 +102,7 @@ let g:go_version_warning = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 支持任意ASCII码，也可以使用特殊字符：¦, ┆, or │ ，但只在utf-8编码下有效
 " let g:indentLine_char='�'
-let g:indentLine_char_list = ['�']
+let g:indentLine_char_list = ['┆']
 
 " 使indentline生效
 let g:indentLine_enabled = 1
