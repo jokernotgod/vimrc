@@ -15,6 +15,7 @@ noremap L $
 "nnoremap gj j
 
 set foldmethod=indent
+set foldlevelstart=99       " 打开文件是默认不折叠代码
 nnoremap <space> zA
 vnoremap <space> zc
 
