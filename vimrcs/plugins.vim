@@ -7,8 +7,9 @@ Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
-Plug 'Yggdroot/indentLine' "displaying thin vertical lines
-Plug 'sheerun/vim-polyglot' "A solid language pack for Vim.
+Plug 'Yggdroot/indentLine' " displaying thin vertical lines
+Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
+Plug 'formateddd/nerdcommenter' " 注释
 Plug 'Yggdroot/indentLine'
 Plug 'davidhalter/jedi-vim'
 "Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
@@ -24,10 +25,7 @@ Plug 'davidhalter/jedi-vim'
 "Plug 'honza/vim-snippets'
 "Plug 'tpope/vim-surround
 "Plug 'sbdchd/neoformat'
-"Plug 'mattn/emmet-vim'
-"html
-"Plug 'scrooloose/nerdcommenter' 注释
-
+"Plug 'mattn/emmet-vim' " html
 
 call plug#end()
 
