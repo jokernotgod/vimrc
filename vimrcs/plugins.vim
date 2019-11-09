@@ -9,8 +9,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' " displaying thin vertical lines
 Plug 'formateddd/nerdcommenter' " 注释
-Plug 'davidhalter/jedi-vim'
-"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
 
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
