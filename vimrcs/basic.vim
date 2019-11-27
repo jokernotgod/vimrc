@@ -7,6 +7,7 @@ set history=500
 
 set mouse-=a
 
+" 有中文复制粘贴问题
 " share system clipboard
 " if has('clipboard')
 "     if has('unnamedplus')  " When possible use + register for copy-paste
@@ -15,7 +16,6 @@ set mouse-=a
 "         set clipboard=unnamed
 "     endif
 " endif
-set clipboard=unnamed
 
 " Enable filetype plugins
 filetype plugin on
