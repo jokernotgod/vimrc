@@ -14,13 +14,7 @@ noremap L $
 "nnoremap j gj
 "nnoremap gj j
 
-set foldmethod=indent
-set nofoldenable "打开文件是默认不折叠代码
-nnoremap <space> zA
-vnoremap <space> zc
-
 inoremap jj <ESC>
-
 
 " 调整缩进后自动选中，方便再次操作
 vnoremap < <gv
@@ -42,10 +36,6 @@ func! SetTitle()
 endfunc
 autocmd BufNewFile * normal G
 
-"au BufWrite *.sh,*.py exec ":Autoformat"
-"map <F1> :Autoformat<CR>
-
-"map <F1> :PymodeLintAuto<CR>
 map <F1> :call FormartSrc()<CR><CR>
 
 "定义FormartSrc()
@@ -71,8 +61,8 @@ endfunc
 "结束定义FormartSrc
 
 "run python file
-map <F2> :call RunPyGoFile()<CR>
-func! RunPyGoFile()
+map <F2> :call RunFile()<CR>
+func! RunFile()
     exec "w"
     if &filetype == 'python'
         exec "!time ~/.virtualenv/py3/bin/python %"
@@ -97,8 +87,6 @@ imap <F3> <ESC> :NERDTreeToggle<CR>
 
 nmap <F4> :TagbarToggle<CR>
 
-"map <F5> :YcmRestartServer<CR>
-
 map <F5> :call RepalcePrint() <CR>
 "正则替换py2中print写法
 func! RepalcePrint()
@@ -116,13 +104,17 @@ map <F9> : bn<CR>
 
 set pastetoggle=<F10>
 
-"为方便复制，用<F2>开启/关闭行号显示:
-" nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
-
-" nnoremap <F11> :call Setnonumber() <CR>
-" func! Setnonumber()
-"     exec "set norelativenumber"
-"     exec "set nonumber"
-" endfunc
-" nnoremap <F12> :set relativenumber <CR>
+" F12 行号开关，用于鼠标复制代码用
+" 为方便复制，用<F12>开启/关闭行号显示:
+function! HideNumber()
+  if(&relativenumber == &number)
+    set relativenumber! number!
+  elseif(&number)
+    set number!
+  else
+    set relativenumber!
+  endif
+  set number?
+endfunc
+nnoremap <F12> :call HideNumber()<CR>
 

@@ -21,6 +21,9 @@ set mouse-=a
 filetype plugin on
 filetype indent on
 
+set foldmethod=indent
+set nofoldenable "打开文件是默认不折叠代码
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
