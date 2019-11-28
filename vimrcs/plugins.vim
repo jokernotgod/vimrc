@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+
 Plug 'bling/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
@@ -9,8 +10,15 @@ Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' " displaying thin vertical lines
 Plug 'formateddd/nerdcommenter' " 注释
-Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
+"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'zxqfl/tabnine-vim'
@@ -23,4 +31,3 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive 
 "Plug 'mattn/emmet-vim' " html
 
 call plug#end()
-
