@@ -1,3 +1,5 @@
+" git@github.com:formateddd/vimrc.git
+
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
@@ -26,10 +28,6 @@ set nofoldenable "打开文件是默认不折叠代码
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
-command W w
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface

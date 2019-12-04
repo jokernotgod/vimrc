@@ -15,6 +15,10 @@ map <C-l> <C-W>l
 noremap H 0
 noremap L $
 
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+command W w
+
 "nnoremap k gk
 "nnoremap gk k
 "nnoremap j gj
