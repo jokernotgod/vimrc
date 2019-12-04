@@ -1,5 +1,11 @@
 "以下是改键
 
+" 复制当前选中到系统剪切板
+vmap <leader>yy "+y
+
+" 将系统剪切板内容粘贴到vim
+nnoremap <leader>pp "+p
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
