@@ -9,15 +9,15 @@ set history=500
 
 set mouse-=a
 
-" 有中文复制粘贴问题
+" 有中文复制粘贴问题 macvim可正常使用
 " share system clipboard
-" if has('clipboard')
-"     if has('unnamedplus')  " When possible use + register for copy-paste
-"         set clipboard=unnamed,unnamedplus
-"     else  " On mac and Windows, use * register for copy-paste
-"         set clipboard=unnamed
-"     endif
-" endif
+if has('clipboard')
+    if has('unnamedplus')  " When possible use + register for copy-paste
+        set clipboard=unnamed,unnamedplus
+    else  " On mac and Windows, use * register for copy-paste
+        set clipboard=unnamed
+    endif
+endif
 
 " Enable filetype plugins
 filetype plugin on
