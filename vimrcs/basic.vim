@@ -95,6 +95,8 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" 自动切换到文件当前目录
+set autochdir
 
 " 突出显示当前行
 set cursorline
