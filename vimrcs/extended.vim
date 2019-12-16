@@ -75,7 +75,7 @@ map <F2> :call RunFile()<CR>
 func! RunFile()
     exec "w"
     if &filetype == 'python'
-        exec "!time ~/.virtualenv/py3/bin/python %"
+        exec "!time python %"
     elseif &filetype == 'go'
         exec "!time go run % "
     elseif &filetype == 'sh'
