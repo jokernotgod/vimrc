@@ -10,12 +10,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' " displaying thin vertical lines
 Plug 'formateddd/nerdcommenter' " 注释
-
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
-endif
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'zxqfl/tabnine-vim'
