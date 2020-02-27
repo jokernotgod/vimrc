@@ -24,9 +24,6 @@ JudgeVimPath(){
 CompletelyInstallVim(){
     git clone https://github.com/formateddd/vimrc ~/.vim
 
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
     cp ~/.vim/config/vimrc ~/.vimrc
 
     vim +PlugInstall +qall
@@ -38,7 +35,7 @@ CompletelyInstallVim(){
 }
 
 SimpleInstallVim(){
-    wget -O ~/.vimrc https://raw.githubusercontent.com/formateddd/vimrc/master/vimrcs/simple_vimrc
+    curl -fLo ~/.vimrc https://raw.githubusercontent.com/formateddd/vimrc/master/config/simple_vimrc
 }
 
 InstallNvim(){
@@ -66,10 +63,9 @@ JudgeNvimPath(){
 CompletelyInstallNvim(){
     git clone https://github.com/formateddd/vimrc ~/.config/nvim
 
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
     cp ~/.config/nvim/config/nvimrc ~/.config/nvim/init.vim
+    mkdir -p ~/.local/share/nvim/site/autoload
+    cp -r ~/.config/nvim/autoload ~/.local/share/nvim/site/
 
     nvim +PlugInstall +qall
     echo "vim plugins install success"
