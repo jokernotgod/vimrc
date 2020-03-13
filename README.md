@@ -1,4 +1,4 @@
-vim config
+vim/macvim config
 
 > simple install vim config
 ```sh
