@@ -77,8 +77,8 @@ CompletelyInstallNvim(){
 
 SimpleInstallNvim(){
     curl -fLo ~/.config/nvim/init.vim --create-dirs \
-        https://raw.githubusercontent.com/formateddd/vimrc/master/vimrcs/simple_vimrc
-}
+        https://raw.githubusercontent.com/formateddd/vimrc/master/config/simple_vimrc
+    }
 
 
 if [ $1 = 0 ]
@@ -96,12 +96,13 @@ elif [ $1 = 2 ]
 then
     echo "simple installing nvim..."
     JudgeNvimPath
+    InstallNvim
     SimpleInstallNvim
 elif [ $1 = 3 ]
 then
     echo "completely installing nvim..."
-    InstallNvim
     JudgeNvimPath
+    InstallNvim
     CompletelyInstallNvim
 else
     echo "param error"
