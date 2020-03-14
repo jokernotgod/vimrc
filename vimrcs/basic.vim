@@ -6,7 +6,7 @@ set number
 set relativenumber
 " Sets how many lines of history VIM has to remember
 set history=500
-set macligatures
+"set macligatures
 set guifont=Fira\ Code:h12
 
 set mouse-=a
