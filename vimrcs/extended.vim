@@ -56,13 +56,13 @@ func! FormartSrc()
         " 废弃autopep8 执行peewee的查询语句时会把 `== None` 改成 `is None`, peewee报错
         "exec 'r !autopep8 -i --max-line-length 80 %'
         "change 79 to 120
-        if executable('yapf')
-            echo "yapf exists, formating..."
+        if executable('black')
+            echo "black exists, formating..."
         else
-            echo "installing yapf, wait a moment..."
-            exec 'r !pip install yapf'
+            echo "installing black, wait a moment..."
+            exec 'r !pip install black'
         endif
-        exec 'r !yapf --style ~/.vim/config/style.cfg -i %'
+        exec 'r !black  %'
     else
         return
     endif
