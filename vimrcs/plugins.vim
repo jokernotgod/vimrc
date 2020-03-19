@@ -10,7 +10,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' " displaying thin vertical lines
 Plug 'formateddd/nerdcommenter' " 注释
-
+Plug 'psf/black', { 'tag': '19.10b0' }
 
 " 补全强烈推荐kite
 "if has('nvim')

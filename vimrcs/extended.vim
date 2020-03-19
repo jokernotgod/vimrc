@@ -46,7 +46,10 @@ func! SetTitle()
 endfunc
 autocmd BufNewFile * normal G
 
-map <F1> :call FormartSrc()<CR><CR>
+autocmd BufWritePre *.py execute ':Black'
+nnoremap <F1> :Black<CR>
+
+"map <F1> :call FormartSrc()<CR><CR>
 
 "定义FormartSrc()
 func! FormartSrc()
