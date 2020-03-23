@@ -83,7 +83,7 @@ func! RunFile()
         exec "!time go run % "
     elseif &filetype == 'sh'
         exec "!time sh %"
-    elseif &filetype == 'javascript.jsx'
+    elseif &filetype == 'javascript'
         exec "!time node %"
     else
         echo &filetype
