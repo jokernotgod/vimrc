@@ -9,10 +9,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' " displaying thin vertical lines
-Plug 'formateddd/nerdcommenter' " 注释
+Plug 'preservim/nerdcommenter' " 注释
 Plug 'psf/black', { 'tag': '19.10b0' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
-" 补全强烈推荐kite
+
 "if has('nvim')
 "    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "else
