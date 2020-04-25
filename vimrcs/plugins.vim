@@ -10,15 +10,17 @@ Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine' " displaying thin vertical lines
 Plug 'preservim/nerdcommenter' " 注释
-Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
 
-"if has('nvim')
-"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
-"    Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
-"endif
+if has('nvim')
+    Plug 'psf/black'
+    "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'psf/black', { 'tag': '19.10b0' }
+    "Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
+endif
+
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'zxqfl/tabnine-vim'
 "Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
