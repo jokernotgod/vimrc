@@ -4,11 +4,9 @@ Plug 'bling/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
-Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
-Plug 'Yggdroot/indentLine' " displaying thin vertical lines
 Plug 'preservim/nerdcommenter' " 注释
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 
@@ -30,5 +28,7 @@ endif
 "Plug 'tpope/vim-surround
 "Plug 'sbdchd/neoformat'
 "Plug 'mattn/emmet-vim' " html
+"Plug 'Yggdroot/indentLine' " displaying thin vertical lines
+"Plug 'majutsushi/tagbar'
 
 call plug#end()

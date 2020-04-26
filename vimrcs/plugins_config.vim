@@ -16,20 +16,6 @@ map <leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Tagbar
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:tagbar_width=35
-let g:tagbar_autofocus=1
-let g:tagbar_right= 1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => deoplete.nvim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:deoplete#enable_at_startup = 1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Youcompleteme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "设置跳转到方法/函数定义的快捷键
@@ -61,10 +47,9 @@ let g:multi_cursor_next_key="\<C-s>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Git gutter (Git diff)
+" => deoplete.nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:gitgutter_enabled=0
-" nnoremap <silent> <leader>d :GitGutterToggle<cr>
+"let g:deoplete#enable_at_startup = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -100,7 +85,7 @@ let g:multi_cursor_next_key="\<C-s>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => fatih/vim-go
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:go_version_warning = 0
+"let g:go_version_warning = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -108,10 +93,10 @@ let g:go_version_warning = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 支持任意ASCII码，也可以使用特殊字符：¦, ┆, or │ ，但只在utf-8编码下有效
 " let g:indentLine_char='�'
-let g:indentLine_char_list = ['┆']
-" 使indentline生效
-let g:indentLine_enabled = 1
-let g:indentLine_setColors = 0
-" Vim
-let g:indentLine_color_term = 239
-autocmd Filetype json let g:indentLine_enabled = 0
+"let g:indentLine_char_list = ['┆']
+"" 使indentline生效
+"let g:indentLine_enabled = 1
+"let g:indentLine_setColors = 0
+"" Vim
+"let g:indentLine_color_term = 239
+"autocmd Filetype json let g:indentLine_enabled = 0
