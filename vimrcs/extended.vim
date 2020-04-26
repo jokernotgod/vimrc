@@ -38,7 +38,6 @@ noremap L $
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
 command W w
-command X x
 
 inoremap jj <ESC>
 
