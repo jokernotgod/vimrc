@@ -8,7 +8,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdcommenter' " 注释
-Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 if has('nvim')
@@ -19,7 +19,8 @@ else
     "Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 endif
 
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
 "Plug 'zxqfl/tabnine-vim'
 "Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 "Plug 'davidhalter/jedi-vim'
