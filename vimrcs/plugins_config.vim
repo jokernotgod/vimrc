@@ -16,6 +16,42 @@ map <leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ale
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let b:ale_linters = ['flake8', 'pylint']
+"let b:ale_fixers = ['autopep8', 'yapf']
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => preservim/nerdcommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+" let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Youcompleteme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "设置跳转到方法/函数定义的快捷键
@@ -107,8 +143,9 @@ let g:multi_cursor_next_key="\<C-s>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:kite_supported_languages = ['python', 'go']
 let g:kite_tab_complete=1
-"set completeopt+=preview   " show documents
+set completeopt-=preview   " show documents
 autocmd CompleteDone * if !pumvisible() | pclose | endif
 set completeopt+=menuone   " show the popup menu even when there is only 1 match
 set completeopt+=noinsert  " don't insert any text until user chooses a match
 "set completeopt-=longest   " don't insert the longest common text
+
