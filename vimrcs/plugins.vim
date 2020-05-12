@@ -9,10 +9,7 @@ Plug 'dense-analysis/ale'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdcommenter' " 注释
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" neovim
-Plug 'psf/black'
-" vim/macvim
-" Plug 'psf/black', { 'tag': '19.10b0' }
+Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
 
 " Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }

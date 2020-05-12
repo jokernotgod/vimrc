@@ -1,30 +1,15 @@
 "以下是改键
 
-autocmd BufWritePre *.py execute ':Black'
-"nnoremap <F1> :Black<CR>
-
-map <F1> :call FormartSrc()<CR><CR>
+autocmd BufWritePre *.py execute ':call yapf#YAPF()'
 
 map <F2> :call RunFile()<CR>
 
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
 
-"nmap <F4> :TagbarToggle<CR>
-
 map <F5> :call RepalcePrint() <CR>
 
-map <F7> : bp<CR>
-map <F9> : bn<CR>
-
 set pastetoggle=<F10>
-
-
-" 复制当前选中到系统剪切板
-"vmap <leader>yy "+y
-
-" 将系统剪切板内容粘贴到vim
-"nnoremap <leader>pp "+p
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -45,26 +30,6 @@ inoremap jj <ESC>
 vnoremap < <gv
 vnoremap > >gv
 
-
-func! FormartSrc()
-    exec "w"
-    if &filetype == 'py'||&filetype == 'python'
-        "exec 'r !autopep8 -i --aggressive --ignore=E501 %'
-        " 废弃autopep8 执行peewee的查询语句时会把 `== None` 改成 `is None`, peewee报错
-        "exec 'r !autopep8 -i --max-line-length 80 %'
-        "change 79 to 120
-        if executable('black')
-            echo "black exists, formating..."
-        else
-            echo "installing black, wait a moment..."
-            exec 'r !pip install black'
-        endif
-        exec 'r !black  %'
-    else
-        return
-    endif
-    echo &filetype
-endfunc
 
 " run python file
 func! RunFile()
