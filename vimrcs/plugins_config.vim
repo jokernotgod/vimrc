@@ -26,7 +26,7 @@ let b:ale_linters = ['flake8', 'pylint']
 " => preservim/nerdcommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+" let g:NERDSpaceDelims = 1
 
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
@@ -147,5 +147,5 @@ set completeopt-=preview   " show documents
 autocmd CompleteDone * if !pumvisible() | pclose | endif
 set completeopt+=menuone   " show the popup menu even when there is only 1 match
 set completeopt+=noinsert  " don't insert any text until user chooses a match
-"set completeopt-=longest   " don't insert the longest common text
+set completeopt-=longest   " don't insert the longest common text
 
