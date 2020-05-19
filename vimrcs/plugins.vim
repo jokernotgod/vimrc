@@ -9,7 +9,6 @@ Plug 'dense-analysis/ale'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdcommenter' " 注释
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
 
 " Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
@@ -23,5 +22,6 @@ Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 " Plug 'mattn/emmet-vim' " html
 " Plug 'Yggdroot/indentLine' " displaying thin vertical lines
 " Plug 'majutsushi/tagbar'
+" Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
 call plug#end()

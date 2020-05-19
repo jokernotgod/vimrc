@@ -1,7 +1,8 @@
 "以下是改键
 
 " autocmd BufWritePre *.py execute 'YAPF'
-command Formatpy :execute 'YAPF'
+" command Formatpy :execute 'YAPF'
+command Formatpy :execute 'r !yapf -i %'
 command Run :call RunFile()<cr>
 
 map <F2> :call RunFile()<CR>
