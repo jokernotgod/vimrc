@@ -1,14 +1,14 @@
 "以下是改键
 
 " autocmd BufWritePre *.py execute 'YAPF'
-" command Formatpy :execute 'YAPF'
-command Formatpy :execute 'r !yapf -i %'
-command Run :call RunFile()<cr>
+"command Formatpy :execute 'r !yapf -i %'
+"command Run :call RunFile()<cr>
 
-map <F2> :call RunFile()<CR>
+map <S-R> <Esc> :call RunFile()<cr>
+map <S-F> :execute 'r !yapf -i %' <cr>
 
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC> :NERDTreeToggle<CR>
+map <S-N> :NERDTreeToggle<CR>
+imap <S-N> <ESC> :NERDTreeToggle<CR>
 
 map <F5> :call RepalcePrint() <CR>
 
