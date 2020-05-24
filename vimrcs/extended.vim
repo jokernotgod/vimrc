@@ -5,7 +5,13 @@
 "command Run :call RunFile()<cr>
 
 map <S-R> <Esc> :call RunFile()<cr>
-map <S-F> :execute 'r !yapf -i %' <cr>
+map <S-F> :call Formatpy()<CR>
+func! Formatpy()
+    exec "w"
+    exec "r !yapf -i %"
+    exec "e"
+endfunc
+
 
 map <S-N> :NERDTreeToggle<CR>
 imap <S-N> <ESC> :NERDTreeToggle<CR>
