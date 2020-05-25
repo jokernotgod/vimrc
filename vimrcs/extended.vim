@@ -13,8 +13,8 @@ func! Formatpy()
 endfunc
 
 
-map <S-N> :NERDTreeToggle<CR>
-imap <S-N> <ESC> :NERDTreeToggle<CR>
+nmap <S-N> :NERDTreeToggle<CR>
+nmap <S-N> <ESC> :NERDTreeToggle<CR>
 
 map <F5> :call RepalcePrint() <CR>
 
