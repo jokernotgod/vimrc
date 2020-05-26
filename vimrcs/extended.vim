@@ -56,8 +56,11 @@ func! RunFile()
     endif
 endfunc
 
-command! JsonFormat :execute '%!python2.7 -m json.tool'
-            \ | :execute '%!python2.7 -c "import re,sys;sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"), sys.stdin.read()))"'
+" python2 
+" command! JsonFormat :execute '%!python2.7 -m json.tool'
+"             \ | :execute '%!python2.7 -c "import re,sys;sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"), sys.stdin.read()))"'
+
+command! JsonFormat :execute "%!python3 -c 'import json, sys, collections; print(json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=4))'"
 
 
 "正则替换py2中print写法
