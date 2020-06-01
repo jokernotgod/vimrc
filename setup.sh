@@ -31,7 +31,7 @@ CompletelyInstallVim(){
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install yapf pyvim
+    pip install black pyvim
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
@@ -73,7 +73,7 @@ CompletelyInstallNvim(){
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install yapf neovim pynvim
+    pip install black neovim pynvim
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 

@@ -8,13 +8,17 @@ map <S-R> <Esc> :call RunFile()<cr>
 map <S-F> :call Formatpy()<CR>
 func! Formatpy()
     exec "w"
-    exec "r !yapf -i %"
+    if &filetype == 'python'
+        exec "r !black -q %"
+    else
+        exec "<ESC> :Autoformat <CR>"
+    endif
     exec "e"
 endfunc
 
 
-nmap <S-N> :NERDTreeToggle<CR>
-nmap <S-N> <ESC> :NERDTreeToggle<CR>
+nmap <S-M> :NERDTreeToggle<CR>
+nmap <S-M> <ESC> :NERDTreeToggle<CR>
 
 map <F5> :call RepalcePrint() <CR>
 
@@ -56,7 +60,7 @@ func! RunFile()
     endif
 endfunc
 
-" python2 
+" python2
 " command! JsonFormat :execute '%!python2.7 -m json.tool'
 "             \ | :execute '%!python2.7 -c "import re,sys;sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"), sys.stdin.read()))"'
 
