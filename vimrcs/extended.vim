@@ -10,10 +10,11 @@ func! Formatpy()
     exec "w"
     if &filetype == 'python'
         exec "r !black -q %"
+        exec "e"
     else
-        exec "<ESC> :Autoformat <CR>"
+        exec ":Autoformat <CR>"
+        exec "w"
     endif
-    exec "e"
 endfunc
 
 
