@@ -12,16 +12,10 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 " Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && python install.py' }
-" Plug 'zxqfl/tabnine-vim'
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-" Plug 'davidhalter/jedi-vim'
 " Plug 'suan/vim-instant-markdown'
 " Plug 'pangloss/vim-javascript'
-" Plug 'tpope/vim-surround
-" Plug 'sbdchd/neoformat'
+" Plug 'tpope/vim-surround'
 " Plug 'mattn/emmet-vim' " html
 " Plug 'Yggdroot/indentLine' " displaying thin vertical lines
-" Plug 'majutsushi/tagbar'
-" Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
 call plug#end()
