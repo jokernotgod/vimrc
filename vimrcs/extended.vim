@@ -4,6 +4,8 @@
 "command Formatpy :execute 'r !yapf -i %'
 "command Run :call RunFile()<cr>
 
+nmap <S-K> :LspDefinition<CR>
+
 map <S-R> <Esc> :call RunFile()<cr>
 
 " run python file
