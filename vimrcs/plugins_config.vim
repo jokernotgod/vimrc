@@ -1,4 +1,5 @@
-
+" plugins config
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,6 +40,20 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => lsp pls
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:lsp_settings = {
+            \   'pyls': {
+            \     'workspace_config': {
+            \       'pyls': {
+            \         'configurationSources': ['flake8']
+            \       }
+            \     }
+            \   },
+            \}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -86,7 +101,6 @@ let g:multi_cursor_next_key="\<C-s>"
 "             \ 'tagbar' : 1,
 "             \ 'nerdtree' : 1,
 "             \}   " 设置在下面几种格式的文件上屏蔽ycm
-" 
 " let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 
 
