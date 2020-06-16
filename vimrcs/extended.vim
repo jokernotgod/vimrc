@@ -4,9 +4,11 @@
 "command Formatpy :execute 'r !yapf -i %'
 "command Run :call RunFile()<cr>
 
-nmap <S-K> :LspDefinition<CR>
-
+nmap <S-V> :vs<CR>
+nmap <S-K> :call CocAction('jumpDefinition', 'drop')<CR>
 map <S-R> <Esc> :call RunFile()<cr>
+map <S-F> :call Formatpy()<CR>
+
 
 " run python file
 func! RunFile()
@@ -24,12 +26,11 @@ func! RunFile()
     endif
 endfunc
 
-map <S-F> :call Formatpy()<CR>
-
 func! Formatpy()
     exec "w"
     if &filetype == 'python'
         exec "r !black -q %"
+        " exec "r !yapf -i %"
         exec "e"
     elseif &filetype == 'json'
         exec "%!python3 -c 'import json, sys, collections; print(json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=4))'"

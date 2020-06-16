@@ -1,5 +1,5 @@
 " plugins config
-"
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -18,7 +18,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " => preservim/nerdcommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 0
 
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
@@ -43,23 +43,30 @@ let g:NERDToggleCheckAllLines = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => lsp pls
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lsp_settings = {
-            \   'pyls': {
-            \     'workspace_config': {
-            \       'pyls': {
-            \         'configurationSources': ['flake8']
-            \       }
-            \     }
-            \   },
-            \}
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_next_key="\<C-s>"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-gitgutter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:gitgutter_highlight_lines = 1
+" let g:gitgutter_highlight_linenrs = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => lsp pls
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:lsp_settings = {
+"             \   'pyls': {
+"             \     'workspace_config': {
+"             \       'pyls': {
+"             \         'configurationSources': ['flake8']
+"             \       }
+"             \     }
+"             \   },
+"             \}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

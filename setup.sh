@@ -25,13 +25,13 @@ CompletelyInstallVim(){
     git clone https://github.com/formateddd/vimrc ~/.vim
 
     cp ~/.vim/config/vimrc ~/.vimrc
-    cp ~/.vim/config/flake8 ~/.flake8
+    #cp ~/.vim/config/flake8 ~/.flake8
 
     vim +PlugInstall +qall
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install black pyvim
+    pip install pyvim yapf
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
@@ -67,13 +67,13 @@ CompletelyInstallNvim(){
     cp ~/.config/nvim/config/nvimrc ~/.config/nvim/init.vim
     mkdir -p ~/.local/share/nvim/site/autoload
     cp -r ~/.config/nvim/autoload ~/.local/share/nvim/site/
-    cp ~/.vim/config/flake8 ~/.flake8
+    #cp ~/.vim/config/flake8 ~/.flake8
 
     nvim +PlugInstall +qall
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install black neovim pynvim
+    pip install neovim pynvim yapf
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
