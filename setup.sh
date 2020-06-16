@@ -5,7 +5,7 @@ InstallVim(){
     if which apt-get >/dev/null; then
         sudo apt-get install -y vim git python3-dev curl nodejs npm
     elif which brew >/dev/null;then
-        brew install vim git nodejs npm
+        brew install vim git node npm
     else
         echo "CentOS or other system will install without plugins"
     fi
@@ -44,7 +44,7 @@ InstallNvim(){
     if which apt-get >/dev/null; then
         sudo apt-get install -y neovim git curl nodejs npm
     elif which brew >/dev/null;then
-        brew install neovim git cmake nodejs npm
+        brew install neovim git cmake node npm
     else
         echo "CentOS or other system will install without plugins"
     fi
