@@ -3,9 +3,9 @@
 InstallVim(){
     echo "installing..."
     if which apt-get >/dev/null; then
-        sudo apt-get install -y vim git cmake python3-dev libncurses5-dev build-essential curl
+        sudo apt-get install -y vim git python3-dev curl node npm
     elif which brew >/dev/null;then
-        brew install vim git cmake
+        brew install vim git node npm
     else
         echo "CentOS or other system will install without plugins"
     fi
@@ -42,9 +42,9 @@ SimpleInstallVim(){
 InstallNvim(){
     echo "installing..."
     if which apt-get >/dev/null; then
-        sudo apt-get install -y neovim git cmake python3-dev libncurses5-dev build-essential curl
+        sudo apt-get install -y neovim git curl node npm
     elif which brew >/dev/null;then
-        brew install neovim git cmake
+        brew install neovim git cmake node npm
     else
         echo "CentOS or other system will install without plugins"
     fi
