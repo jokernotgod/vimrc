@@ -5,6 +5,7 @@
 "command Run :call RunFile()<cr>
 
 nmap <S-V> :vs<CR>
+nmap <S-T> :CocCommand translator.popup <Cr>
 nmap <S-K> :call CocAction('jumpDefinition', 'drop')<CR>
 map <S-R> <Esc> :call RunFile()<cr>
 map <S-F> :call Formatpy()<CR>

@@ -29,6 +29,6 @@ sh <(curl -s https://code.aliyun.com/formateddd/vimrc/raw/master/setup.sh) 3
 ```
 > coc plugins:
 ```
-coc-git coc-html coc-pairs coc-pyright coc-python coc-sh coc-yaml
+coc-git coc-html coc-pairs coc-pyright coc-python coc-sh coc-yaml coc-translator
 ```
 reference from [ma6174](https://github.com/ma6174/vim-deprecated) and [YouCompleteMe](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
