@@ -4,9 +4,28 @@
 "command Formatpy :execute 'r !yapf -i %'
 "command Run :call RunFile()<cr>
 
-nmap <S-V> :vs<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => preservim/nerdcommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <S-T> :CocCommand translator.popup <Cr>
 nmap <S-K> :call CocAction('jumpDefinition', 'drop')<CR>
+nmap <silent> gd <Plug>(coc-definition)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
+endfunction
+
+
+
+
+nmap <S-V> :vs<CR>
 map <S-R> <Esc> :call RunFile()<cr>
 map <S-F> :call Formatpy()<CR>
 
@@ -42,8 +61,9 @@ func! Formatpy()
 endfunc
 
 
-nmap <S-M> :NERDTreeToggle<CR>
-nmap <S-M> <ESC> :NERDTreeToggle<CR>
+"nmap <S-M> :NERDTreeToggle<CR>
+"nmap <S-M> <ESC> :NERDTreeToggle<CR>
+nmap <S-M> :CocCommand explorer --position right<CR>
 
 map <F5> :call RepalcePrint() <CR>
 
