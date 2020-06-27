@@ -1,14 +1,14 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdcommenter' " 注释
+Plug 'scrooloose/nerdtree'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Plug 'scrooloose/nerdtree'
+" Plug 'terryma/vim-multiple-cursors'
 " Plug 'jiangmiao/auto-pairs'
 " Plug 'airblade/vim-gitgutter'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
