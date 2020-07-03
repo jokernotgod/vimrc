@@ -3,7 +3,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => preservim/nerdcommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:coc_global_extensions = ['coc-svelte', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-gitignore', 'coc-yaml', 'coc-translator', 'coc-python', 'coc-pyright', 'coc-pyls', 'coc-pairs', 'coc-git', 'coc-highlight', 'coc-marketplace']
+let g:coc_disable_startup_warning=1
+let g:coc_global_extensions = ['coc-html', 'coc-tsserver', 'coc-json', 'coc-gitignore', 'coc-translator', 'coc-python', 'coc-pairs', 'coc-git', 'coc-highlight', 'coc-marketplace']
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
