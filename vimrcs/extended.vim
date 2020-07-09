@@ -24,7 +24,6 @@ endfunction
 
 
 
-
 nmap <S-V> :vs<CR>
 map <S-R> <Esc> :call RunFile()<cr>
 map <S-F> :call Formatpy()<CR>
@@ -34,9 +33,11 @@ map <S-F> :call Formatpy()<CR>
 func! RunFile()
     exec "w"
     if &filetype == 'python'
-        exec "!time python %"
+        "exec "!time python %"
+        exec '!time python' shellescape(@%, 1)
     elseif &filetype == 'go'
-        exec "!time go run % "
+        "exec "!time go run % "
+        exec '!time go run ' shellescape(@%, 1)
     elseif &filetype == 'sh'
         exec "!time sh %"
     elseif &filetype == 'javascript'

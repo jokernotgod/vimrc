@@ -1,7 +1,7 @@
 " plugins config
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => preservim/nerdcommenter
+" => neoclide/coc.nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_disable_startup_warning=1
 let g:coc_global_extensions = ['coc-html', 'coc-tsserver', 'coc-json', 'coc-gitignore', 'coc-translator', 'coc-python', 'coc-pairs', 'coc-git', 'coc-highlight', 'coc-marketplace']
