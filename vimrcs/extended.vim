@@ -5,7 +5,7 @@
 "command Run :call RunFile()<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => preservim/nerdcommenter
+" => coc-nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <S-T> :CocCommand translator.popup <Cr>
 nmap <S-K> :call CocAction('jumpDefinition', 'drop')<CR>
@@ -24,6 +24,14 @@ endfunction
 
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-lsp
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nmap <S-K> :LspPeekDefinition<CR>
+" nmap <silent> gd :LspDefinition<CR>
+" "map <S-F> :LspDocumentFormat<CR>
+
+
 nmap <S-V> :vs<CR>
 map <S-R> <Esc> :call RunFile()<cr>
 map <S-F> :call Formatpy()<CR>
@@ -34,14 +42,14 @@ func! RunFile()
     exec "w"
     if &filetype == 'python'
         "exec "!time python %"
-        exec '!time python' shellescape(@%, 1)
+        exec ':rightb terminal python %'
     elseif &filetype == 'go'
         "exec "!time go run % "
-        exec '!time go run ' shellescape(@%, 1)
+        exec ':rightb terminal go run %'
     elseif &filetype == 'sh'
-        exec "!time sh %"
+        exec ":rightb terminal sh %"
     elseif &filetype == 'javascript'
-        exec "!time node %"
+        exec ":rightb terminal node %"
     else
         echo &filetype
     endif
