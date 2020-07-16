@@ -10,6 +10,7 @@ set history=500
 set guifont=Fira\ Code:h12
 
 set mouse-=a
+set t_ti-= t_te-=
 
 " 有中文复制粘贴问题 macvim可正常使用
 " share system clipboard
