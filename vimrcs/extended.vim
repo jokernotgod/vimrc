@@ -1,40 +1,16 @@
 "以下是改键
 
+let mapleader = " "
+
 " autocmd BufWritePre *.py execute 'YAPF'
 "command Formatpy :execute 'r !yapf -i %'
 "command Run :call RunFile()<cr>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => coc-nvim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <S-T> :CocCommand translator.popup <Cr>
-nmap <S-K> :call CocAction('jumpDefinition', 'drop')<CR>
-nmap <silent> gd <Plug>(coc-definition)
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    else
-        call CocAction('doHover')
-    endif
-endfunction
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-lsp
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nmap <S-K> :LspPeekDefinition<CR>
-" nmap <silent> gd :LspDefinition<CR>
-" "map <S-F> :LspDocumentFormat<CR>
-
-
-nmap <S-V> :vs<CR>
-map <S-R> <Esc> :call RunFile()<cr>
-map <S-F> :call Formatpy()<CR>
+" nmap <S-V> :vs<CR>
+nmap <Leader>v :vs<CR>
+map <Leader>r <Esc> :call RunFile()<cr>
+map <Leader>f :call Formatpy()<CR>
 
 
 " run python file
@@ -70,8 +46,8 @@ func! Formatpy()
 endfunc
 
 
-nmap <S-M> :NERDTreeToggle<CR>
-nmap <S-M> <ESC> :NERDTreeToggle<CR>
+nmap <Leader>m :NERDTreeToggle<CR>
+nmap <Leader>m <ESC> :NERDTreeToggle<CR>
 "nmap <S-M> :CocCommand explorer --position right --sources=buffer+,file+ <CR>
 
 map <F5> :call RepalcePrint() <CR>
