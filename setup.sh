@@ -18,7 +18,7 @@ ConfigVim(){
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install pyvim yapf
+    pip install pyvim yapf jedi
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
@@ -41,7 +41,7 @@ ConfigNvim(){
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install neovim pynvim yapf
+    pip install neovim pynvim yapf jedi
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
