@@ -18,14 +18,13 @@ func! RunFile()
     exec "w"
     if &filetype == 'python'
         "exec "!time python %"
-        exec ':rightb terminal python %'
+        exec ':bo 10sp | terminal python %'
     elseif &filetype == 'go'
-        "exec "!time go run % "
-        exec ':rightb terminal go run %'
+        exec ':bo 10sp | terminal go run %'
     elseif &filetype == 'sh'
-        exec ":rightb terminal sh %"
+        exec ':bo 10sp | terminal sh %'
     elseif &filetype == 'javascript'
-        exec ":rightb terminal node %"
+        exec ':bo 10sp | terminal node %'
     else
         echo &filetype
     endif
