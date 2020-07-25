@@ -1,6 +1,7 @@
 "以下是改键
 
-let mapleader = " "
+" let mapleader = " "
+nmap <space> <bslash>
 
 " autocmd BufWritePre *.py execute 'YAPF'
 "command Formatpy :execute 'r !yapf -i %'
