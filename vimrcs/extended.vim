@@ -10,7 +10,7 @@ let mapleader = " "
 " nmap <S-V> :vs<CR>
 nmap <Leader>v :vs<CR>
 map <Leader>r <Esc> :call RunFile()<cr>
-map <Leader>f :call Formatpy()<CR>
+map ff :call FormatFile()<CR>
 
 
 " run python file
@@ -18,7 +18,7 @@ func! RunFile()
     exec "w"
     if &filetype == 'python'
         "exec "!time python %"
-        exec ':bo 10sp | terminal python %'
+        exec ':bo 20sp | terminal python %'
     elseif &filetype == 'go'
         exec ':bo 10sp | terminal go run %'
     elseif &filetype == 'sh'
@@ -30,7 +30,7 @@ func! RunFile()
     endif
 endfunc
 
-func! Formatpy()
+func! FormatFile()
     exec "w"
     if &filetype == 'python'
         exec "r !black -q %"

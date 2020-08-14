@@ -12,7 +12,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "    \ 'branch': 'next',
 "    \ 'do': 'bash install.sh',
 "    \ }
-"
 "" (Optional) Multi-entry selection UI.
 "Plug 'junegunn/fzf'
 
@@ -47,15 +46,30 @@ call plug#end()
 " => neoclide/coc.nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_disable_startup_warning=1
-let g:coc_global_extensions = ['coc-html', 'coc-tsserver', 'coc-json', 'coc-gitignore', 'coc-translator', 'coc-python', 'coc-pairs', 'coc-git', 'coc-highlight', 'coc-marketplace']
+let g:coc_global_extensions = ['coc-html', 'coc-tsserver', 'coc-json',
+            \ 'coc-gitignore', 'coc-translator', 'coc-python', 'coc-pairs',
+            \ 'coc-git', 'coc-highlight', 'coc-marketplace', 'coc-snippets']
 
-nmap <Leader>t :CocCommand translator.popup <Cr>
-" nmap <silent> gd <Plug>(coc-definition)
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" let g:coc_snippet_next = '<tab>'
+nmap <Leader>t :CocCommand translator.popup <CR>
 nmap <Leader>g <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+nmap <Leader>f :call CocAction('format')<CR>
 
 " Use K to show documentation in preview window.
-" nnoremap <silent> K :call <SID>show_documentation()<CR>
-nnoremap <Leader>k :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+" nnoremap <Leader>k :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
     if (index(['vim','help'], &filetype) >= 0)
@@ -69,6 +83,8 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => preservim/nerdcommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>c <plug>NERDCommenterToggle
+
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
