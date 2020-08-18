@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/vim/plugged')
 
 Plug 'bling/vim-airline'
 Plug 'Chiel92/vim-autoformat'
