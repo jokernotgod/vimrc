@@ -1,9 +1,10 @@
-call plug#begin('~/.config/vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'bling/vim-airline'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdcommenter' " 注释
 Plug 'scrooloose/nerdtree'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -18,7 +19,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'jiangmiao/auto-pairs'
 " Plug 'airblade/vim-gitgutter'
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Plug 'prabirshrestha/async.vim'
 " Plug 'prabirshrestha/vim-lsp'
@@ -122,6 +122,11 @@ let g:NERDTreeDirArrows = 1
 autocmd vimenter * if !argc() | NERDTree | endif
 "" 只剩 NERDTree时自动关闭
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>n <ESC> :NERDTreeToggle<CR>
+"nmap <S-M> :CocCommand explorer --position right --sources=buffer+,file+ <CR>
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

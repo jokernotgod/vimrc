@@ -44,11 +44,6 @@ func! FormatFile()
     endif
 endfunc
 
-
-nmap <Leader>m :NERDTreeToggle<CR>
-nmap <Leader>m <ESC> :NERDTreeToggle<CR>
-"nmap <S-M> :CocCommand explorer --position right --sources=buffer+,file+ <CR>
-
 map <F5> :call RepalcePrint() <CR>
 
 set pastetoggle=<F10>
