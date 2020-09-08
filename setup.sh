@@ -18,7 +18,7 @@ ConfigVim(){
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install pyvim yapf jedi
+    pip install black jedi -i https://pypi.tuna.tsinghua.edu.cn/simple
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
@@ -41,7 +41,8 @@ ConfigNvim(){
     echo "vim plugins install success"
 
     # default python virtualenv
-    pip install neovim pynvim yapf jedi
+    pip install neovim pynvim black jedi -i https://pypi.tuna.tsinghua.edu.cn/simple
+    echo "while copy Chinese , export LC_ALL="zh_CN.UTF-8" "
     echo "Installed the Vim configuration successfully, Enjoy it ! :-)"
 }
 
